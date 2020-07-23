@@ -3,3 +3,30 @@
 TAG
 
 **********************/
+
+%blog-tag {
+	@include font-family;
+	@include border-radius(2px);
+	@include transition-effect(	color $transition-duration $transition-effect,
+								background-color $transition-duration $transition-effect);
+
+	display: inline-block;
+	font-size: 14px;
+	line-height: 1em;
+	background-color: $grey-04;
+	color: $grey-01;
+	padding: 7px 9px;
+	float: left;
+	margin: 0 8px 8px 0;
+
+	&:last-of-type {
+		margin-right: 0;
+	}
+
+	@include MQ(desktop) {
+		&:hover {
+			background-color: $highlight-02;
+			color: $highlight-01;
+		}
+	}
+}
