@@ -3,3 +3,49 @@
 MIXINS
 
 **********************/
+
+@mixin border-radius($val) {
+	-webkit-border-radius: $val;
+	-moz-border-radius: $val;
+	border-radius: $val;
+}
+
+@mixin transition-effect($string...) {
+	-moz-transition:	$string;
+	-o-transition:		$string;
+	-webkit-transition:	$string;
+	-ms-transition:		$string;
+	transition:			$string;
+}
+
+// GLOBAL VALUES FOR TRANSITION
+$transition-effect: 	ease-in-out;
+$transition-duration:	0.2s;
+
+//MIXINS FOR BREAKPOINTS
+@mixin MQ($canvas) {
+
+	@if $canvas == 'mobile' {
+
+		@media all and (min-width: 0px) and (max-width: 599px) {
+
+			@content;
+		}
+	}
+
+	@if $canvas == 'tablet' {
+
+		@media all and (min-width: 600px) and (max-width: 1023px) {
+
+			@content;
+		}
+	}
+
+	@if $canvas == 'desktop' {
+
+		@media all and (min-width: 1024px) {
+
+			@content;
+		}
+	}
+}
