@@ -3,3 +3,243 @@
 VERTICAL SPACING
 
 **********************/
+
+//MIXIN 6px
+@mixin vs-6px($case) {
+
+	@if $case == ("mt") {
+		margin-top: 6px;
+	}
+
+	@if $case == ("mb") {
+		margin-bottom: 6px;
+	}
+
+	@if $case == ("pt") {
+		padding-top: 6px;
+	}
+
+	@if $case == ("pb") {
+		padding-bottom: 6px
+	}
+}
+
+//MIXIN 12px
+@mixin vs-12px($case) {
+
+	@if $case == ("mt") {
+		margin-top: 12px;
+	}
+
+	@if $case == ("mb") {
+		margin-bottom: 12px;
+	}
+
+	@if $case == ("pt") {
+		padding-top: 12px;
+	}
+
+	@if $case == ("pb") {
+		padding-bottom: 12px
+	}
+}
+
+//MIXIN 18px
+@mixin vs-18px($case) {
+
+	@if $case == ("mt") {
+		margin-top: 18px;
+	}
+
+	@if $case == ("mb") {
+		margin-bottom: 18px;
+	}
+
+	@if $case == ("pt") {
+		padding-top: 18px;
+	}
+
+	@if $case == ("pb") {
+		padding-bottom: 18px
+	}
+}
+
+//MIXIN 24px
+@mixin vs-24px($case) {
+
+	@if $case == ("mt") {
+		margin-top: 24px;
+	}
+
+	@if $case == ("mb") {
+		margin-bottom: 24px;
+	}
+
+	@if $case == ("pt") {
+		padding-top: 24px;
+	}
+
+	@if $case == ("pb") {
+		padding-bottom: 24px
+	}
+}
+
+//MIXIN 30px
+@mixin vs-30px($case) {
+
+	@if $case == ("mt") {
+		margin-top: 30px;
+	}
+
+	@if $case == ("mb") {
+		margin-bottom: 30px;
+	}
+
+	@if $case == ("pt") {
+		padding-top: 30px;
+	}
+
+	@if $case == ("pb") {
+		padding-bottom: 30px
+	}
+}
+
+//MIXIN 36px
+@mixin vs-36px($case) {
+
+	@if $case == ("mt") {
+		margin-top: 36px;
+	}
+
+	@if $case == ("mb") {
+		margin-bottom: 36px;
+	}
+
+	@if $case == ("pt") {
+		padding-top: 36px;
+	}
+
+	@if $case == ("pb") {
+		padding-bottom: 36px
+	}
+}
+
+//MIXIN 42px
+@mixin vs-42px($case) {
+
+	@if $case == ("mt") {
+		margin-top: 42px;
+	}
+
+	@if $case == ("mb") {
+		margin-bottom: 42px;
+	}
+
+	@if $case == ("pt") {
+		padding-top: 42px;
+	}
+
+	@if $case == ("pb") {
+		padding-bottom: 42px
+	}
+}
+
+//MIXIN 48px
+@mixin vs-48px($case) {
+
+	@if $case == ("mt") {
+		margin-top: 48px;
+	}
+
+	@if $case == ("mb") {
+		margin-bottom: 48px;
+	}
+
+	@if $case == ("pt") {
+		padding-top: 48px;
+	}
+
+	@if $case == ("pb") {
+		padding-bottom: 48px
+	}
+}
+
+//MIXIN 60px
+@mixin vs-60px($case) {
+
+	@if $case == ("mt") {
+		margin-top: 60px;
+	}
+
+	@if $case == ("mb") {
+		margin-bottom: 60px;
+	}
+
+	@if $case == ("pt") {
+		padding-top: 60px;
+	}
+
+	@if $case == ("pb") {
+		padding-bottom: 60px
+	}
+}
+
+//MIXIN 78px
+@mixin vs-78px($case) {
+
+	@if $case == ("mt") {
+		margin-top: 78px;
+	}
+
+	@if $case == ("mb") {
+		margin-bottom: 78px;
+	}
+
+	@if $case == ("pt") {
+		padding-top: 78px;
+	}
+
+	@if $case == ("pb") {
+		padding-bottom: 78px
+	}
+}
+
+//MIXIN 90px
+@mixin vs-90px($case) {
+
+	@if $case == ("mt") {
+		margin-top: 90px;
+	}
+
+	@if $case == ("mb") {
+		margin-bottom: 90px;
+	}
+
+	@if $case == ("pt") {
+		padding-top: 90px;
+	}
+
+	@if $case == ("pb") {
+		padding-bottom: 90px
+	}
+}
+
+//MIXIN 120px
+@mixin vs-120px($case) {
+
+	@if $case == ("mt") {
+		margin-top: 120px;
+	}
+
+	@if $case == ("mb") {
+		margin-bottom: 120px;
+	}
+
+	@if $case == ("pt") {
+		padding-top: 120px;
+	}
+
+	@if $case == ("pb") {
+		padding-bottom: 120px
+	}
+}
