@@ -6,8 +6,8 @@ FRAMEWORK
 
 @import '00-framework/colors.scss';
 @import '00-framework/reset.scss';
-@import '00-framework/grid.scss';
 @import '00-framework/mixins.scss';
+@import '00-framework/grid.scss';
 @import '00-framework/typography.scss';
 @import '00-framework/vertical-spacing.scss';
 
@@ -37,6 +37,7 @@ MOLECULES
 @import '02-molecules/blog-post-elements.scss';
 @import '02-molecules/blog-post-media.scss';
 @import '02-molecules/blog-post-related.scss';
+@import '02-molecules/search-page.scss';
 @import '02-molecules/global-footer-elements.scss';
 @import '02-molecules/global-header-elements.scss';
 

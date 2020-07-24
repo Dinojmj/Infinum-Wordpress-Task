@@ -316,10 +316,12 @@ textarea {
 
 ::-moz-selection {
   background: #dc4ba3;
+  color: #ffffff;
   text-shadow: none; }
 
 ::selection {
   background: #dc4ba3;
+  color: #ffffff;
   text-shadow: none; }
 
 img {
@@ -341,14 +343,19 @@ textarea {
 
 /**********************
 
-GRID
+MIXINS
 
 **********************/
 /**********************
 
-MIXINS
+GRID
 
 **********************/
+.global-footer .footer-container, .global-header, .homepage .search-page {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 2.5%; }
+
 /**********************
 
 TYPOGRAPHY
@@ -393,6 +400,72 @@ ATOMS
 BUTTON
 
 **********************/
+.global-header nav li .button-pink {
+  font-family: 'MuseoSansRounded', sans-serif;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  -moz-transition: background-color 0.2s ease-in-out;
+  -o-transition: background-color 0.2s ease-in-out;
+  -webkit-transition: background-color 0.2s ease-in-out;
+  -ms-transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
+  line-height: 25px;
+  color: #ffffff;
+  text-decoration: none;
+  display: inline-block;
+  padding: 16px 29px;
+  font-size: 14px;
+  font-weight: 700;
+  background-color: #dc4ba3;
+  text-transform: uppercase; }
+  .global-header nav li .button-pink:before {
+    display: block;
+    content: '';
+    height: 20px;
+    float: left;
+    background-repeat: no-repeat;
+    margin-right: 11px; }
+  .global-header nav li .button-pink:before {
+    width: 17px;
+    background-image: url("../icons/ic-apple.svg"); }
+  @media all and (min-width: 1024px) {
+    .global-header nav li .button-pink:hover {
+      background-color: #b3b3b3; } }
+
+.global-header nav li .button-grey {
+  font-family: 'MuseoSansRounded', sans-serif;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  -moz-transition: background-color 0.2s ease-in-out;
+  -o-transition: background-color 0.2s ease-in-out;
+  -webkit-transition: background-color 0.2s ease-in-out;
+  -ms-transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
+  line-height: 25px;
+  color: #ffffff;
+  text-decoration: none;
+  display: inline-block;
+  padding: 16px 29px;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: #b3b3b3; }
+  .global-header nav li .button-grey:before {
+    display: block;
+    content: '';
+    height: 20px;
+    float: left;
+    background-repeat: no-repeat;
+    margin-right: 11px; }
+  .global-header nav li .button-grey:before {
+    width: 21px;
+    background-image: url("../icons/ic-unicorn.svg");
+    margin-top: 2px; }
+  @media all and (min-width: 1024px) {
+    .global-header nav li .button-grey:hover {
+      background-color: #dc4ba3; } }
+
 /**********************
 
 BLOCKQUOTE
@@ -403,6 +476,15 @@ BLOCKQUOTE
 ICON
 
 **********************/
+.global-footer .footer-container .social-media-footer li .facebook, .global-footer .footer-container .social-media-footer li .twitter, .global-footer .footer-container .social-media-footer li .instagram {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  overflow: hidden;
+  float: right;
+  margin-left: 12px;
+  background-repeat: no-repeat; }
+
 /**********************
 
 IMAGE
@@ -418,11 +500,26 @@ LOGO
 PARAGRAPH
 
 **********************/
+.global-footer .footer-container .copy-text, .global-footer .footer-container .social-media-footer, .homepage .search-page .search-blog-form .input-field {
+  font-family: 'MuseoSansRounded', sans-serif;
+  font-size: 18px;
+  line-height: 1.667em;
+  color: #555555;
+  font-weight: 300;
+  max-width: 550px; }
+
 /**********************
 
 TITLE
 
 **********************/
+.homepage .search-page .main-title {
+  font-family: 'MuseoSansRounded', sans-serif;
+  font-size: 48px;
+  line-height: 1.167em;
+  font-weight: 100;
+  color: #dc4ba3; }
+
 /**********************
 
 TAG
@@ -446,6 +543,11 @@ BLOG POST MEDIA
 /**********************
 
 BLOG POST RELATED
+
+**********************/
+/**********************
+
+SEARCH PAGE
 
 **********************/
 /**********************
@@ -478,11 +580,152 @@ BLOG POSTS
 GLOBAL FOOTER
 
 **********************/
+.global-footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  overflow: hidden;
+  background-color: #f4f4f4;
+  border-top: 1px solid #d8d8d8; }
+  .global-footer .footer-container {
+    overflow: hidden; }
+    .global-footer .footer-container .logo-container {
+      overflow: hidden;
+      display: inline-block;
+      float: left; }
+      .global-footer .footer-container .logo-container .logo {
+        display: inline-block;
+        height: 24px;
+        width: 172px;
+        float: left; }
+        .global-footer .footer-container .logo-container .logo .image {
+          width: 100%;
+          height: auto; }
+      @media all and (min-width: 1024px) {
+        .global-footer .footer-container .logo-container {
+          margin-left: 100px; } }
+    .global-footer .footer-container .copy-text {
+      margin-top: 18px;
+      float: left;
+      clear: both;
+      color: #828282; }
+    .global-footer .footer-container .social-media-footer {
+      color: #828282;
+      float: right; }
+      .global-footer .footer-container .social-media-footer li {
+        margin-bottom: 6px;
+        text-align: right; }
+        .global-footer .footer-container .social-media-footer li:last-of-type {
+          margin-bottom: 0; }
+        .global-footer .footer-container .social-media-footer li a {
+          text-decoration: none;
+          color: #dc4ba3; }
+        .global-footer .footer-container .social-media-footer li .facebook {
+          height: 20px;
+          margin-top: 4px;
+          background-image: url("../icons/ic-facebook.svg"); }
+        .global-footer .footer-container .social-media-footer li .twitter {
+          height: 18px;
+          margin-top: 6px;
+          background-image: url("../icons/ic-twitter.svg"); }
+        .global-footer .footer-container .social-media-footer li .instagram {
+          height: 20px;
+          margin-top: 4px;
+          background-image: url("../icons/ic-instagram.svg"); }
+      @media all and (min-width: 1024px) {
+        .global-footer .footer-container .social-media-footer {
+          margin-right: 100px; } }
+      @media all and (min-width: 0px) and (max-width: 599px) {
+        .global-footer .footer-container .social-media-footer {
+          margin-top: 30px;
+          clear: both;
+          float: left; } }
+
 /**********************
 
 GLOBAL HEADER
 
 **********************/
+.global-header {
+  overflow: hidden;
+  margin-top: 30px;
+  margin-bottom: 30px; }
+  .global-header .logo {
+    display: inline-block;
+    height: 24px;
+    width: 172px;
+    float: left; }
+    .global-header .logo .image {
+      width: 100%;
+      height: auto; }
+  .global-header nav {
+    float: right; }
+    .global-header nav li {
+      float: left;
+      display: inline-block; }
+      .global-header nav li .home {
+        font-family: 'MuseoSansRounded', sans-serif;
+        -moz-transition: color 0.2s ease-in-out;
+        -o-transition: color 0.2s ease-in-out;
+        -webkit-transition: color 0.2s ease-in-out;
+        -ms-transition: color 0.2s ease-in-out;
+        transition: color 0.2s ease-in-out;
+        font-size: 17px;
+        line-height: 57px;
+        font-weight: 700;
+        color: #555555;
+        text-decoration: none;
+        margin-right: 70px; }
+        @media all and (min-width: 1024px) {
+          .global-header nav li .home:hover {
+            color: #dc4ba3; } }
+      .global-header nav li .button-pink {
+        margin-right: 25px; }
+  @media all and (min-width: 0px) and (max-width: 599px) {
+    .global-header .logo {
+      float: none;
+      display: block;
+      margin: 0 auto; }
+    .global-header nav {
+      margin-top: 18px;
+      clear: both;
+      float: none; }
+      .global-header nav li {
+        margin-bottom: 6px;
+        display: block;
+        float: none; }
+        .global-header nav li:last-of-type {
+          margin-bottom: 0; }
+        .global-header nav li .home {
+          display: block;
+          margin-right: 0;
+          padding: 16px 29px;
+          line-height: 1.2em; }
+        .global-header nav li .button-pink {
+          display: block;
+          margin-right: 0; }
+        .global-header nav li .button-grey {
+          display: block; } }
+  @media all and (min-width: 600px) and (max-width: 1023px) {
+    .global-header .logo {
+      float: none;
+      display: block;
+      margin: 0 auto; }
+    .global-header nav {
+      margin-top: 24px;
+      clear: both;
+      float: none; }
+      .global-header nav ul {
+        overflow: hidden;
+        width: fit-content;
+        margin: 0 auto; } }
+  @media all and (min-width: 1024px) {
+    .global-header {
+      position: relative; }
+      .global-header .logo {
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%); } }
+
 /**********************
 
 PAGES
@@ -493,6 +736,29 @@ PAGES
 HOME
 
 **********************/
+.homepage .search-page {
+  margin-top: 78px;
+  margin-bottom: 120px; }
+  .homepage .search-page .main-title {
+    margin-bottom: 18px;
+    text-align: center; }
+  .homepage .search-page .search-blog-form {
+    margin: 0 auto;
+    display: block;
+    max-width: 210px; }
+    .homepage .search-page .search-blog-form .search-icon {
+      margin-top: 6px;
+      height: 18px;
+      width: 17px;
+      border: none;
+      background-image: url("../icons/ic-search.svg");
+      background-repeat: no-repeat;
+      background-color: #ffffff;
+      margin-right: 8px;
+      float: left; }
+    .homepage .search-page .search-blog-form .input-field {
+      border: none; }
+
 /**********************
 
 BLOG POST

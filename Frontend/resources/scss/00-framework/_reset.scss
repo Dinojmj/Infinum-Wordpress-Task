@@ -342,11 +342,13 @@ textarea {
 
 ::-moz-selection {
     background: $highlight-01;
+    color: $white;
     text-shadow: none;
 }
 
 ::selection {
     background: $highlight-01;
+    color: $white;
     text-shadow: none;
 }
 
