@@ -3,3 +3,99 @@
 BLOG POST ELEMENTS
 
 **********************/
+
+@mixin blog-post-elements {
+
+	.blog-date {
+		@extend %paragraph-blog-info;
+	}
+
+	.blog-post-title {
+		@extend %title-02;
+
+		a {
+			@include transition-effect(color $transition-duration $transition-effect);
+			
+			text-decoration: none;
+			color: $grey-03;
+
+			@include MQ(desktop) {
+						
+				&:hover {
+					color: $highlight-01;
+				}
+			}
+		}
+	}
+
+	.blog-tags {
+		overflow: hidden;
+
+		li {
+
+			@extend %blog-tag;
+
+			a {
+				@extend %blog-tag-style;
+			}
+		}
+	}
+
+	.post-text {
+		@extend %paragraph-01;
+
+		clear: both;
+	}
+
+	.read-more {
+		@extend %paragraph-02;
+		@include transition-effect(color $transition-duration $transition-effect);
+
+		color: $highlight-01;
+		text-decoration: none;
+		margin-left: 18px;
+
+		@include MQ(desktop) {
+					
+			&:hover {
+				color: $grey-02;
+			}
+		}
+	}
+
+	.post-info {
+		overflow: hidden;
+		
+		li {
+			float: left;
+			margin-right: 30px;
+
+			&:last-of-type {
+				margin-right: 0;
+			}
+
+			a {
+				@extend %paragraph-blog-info;
+
+				font-size: 16px;
+				color: $grey-01;
+				font-weight: 500;
+				text-decoration: none;
+			}
+
+			.icon-favorits {
+
+				&:before {
+					@extend %icon-favorite;
+				}
+			}	
+
+			.icon-comments {
+
+				&:before {
+					@extend %icon-comment;
+				}
+			}
+		}
+	}
+}

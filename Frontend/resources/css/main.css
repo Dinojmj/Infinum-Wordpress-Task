@@ -351,10 +351,16 @@ MIXINS
 GRID
 
 **********************/
-.global-footer .footer-container, .global-header, .homepage .search-page {
+.global-footer .footer-container, .global-header, .homepage .search-page, .homepage .blog-post-featured {
   max-width: 1140px;
   margin: 0 auto;
   padding: 0 2.5%; }
+
+.homepage .blog-post-featured .img-container, .homepage .blog-post-featured .container-blog-featured {
+  width: calc((100% * 1/2) - 40px); }
+  @media all and (min-width: 0px) and (max-width: 599px) {
+    .homepage .blog-post-featured .img-container, .homepage .blog-post-featured .container-blog-featured {
+      width: 100%; } }
 
 /**********************
 
@@ -485,6 +491,30 @@ ICON
   margin-left: 12px;
   background-repeat: no-repeat; }
 
+.homepage .blog-post-featured .post-info li .icon-favorits:before {
+  color: #999999;
+  background-repeat: no-repeat;
+  float: left;
+  display: block;
+  content: '';
+  margin-right: 12px;
+  background-image: url("../icons/ic-heart.svg");
+  height: 12px;
+  width: 13px;
+  margin-top: 5px; }
+
+.homepage .blog-post-featured .post-info li .icon-comments:before {
+  color: #999999;
+  background-repeat: no-repeat;
+  float: left;
+  display: block;
+  content: '';
+  margin-right: 12px;
+  background-image: url("../icons/ic-comment.svg");
+  height: 14px;
+  width: 15px;
+  margin-top: 3px; }
+
 /**********************
 
 IMAGE
@@ -500,13 +530,23 @@ LOGO
 PARAGRAPH
 
 **********************/
-.global-footer .footer-container .copy-text, .global-footer .footer-container .social-media-footer, .homepage .search-page .search-blog-form .input-field {
+.homepage .blog-post-featured .read-more, .global-footer .footer-container .copy-text, .global-footer .footer-container .social-media-footer, .homepage .search-page .search-blog-form .input-field, .homepage .blog-post-featured .post-text {
   font-family: 'MuseoSansRounded', sans-serif;
   font-size: 18px;
   line-height: 1.667em;
   color: #555555;
   font-weight: 300;
   max-width: 550px; }
+
+.homepage .blog-post-featured .read-more {
+  font-weight: 500; }
+
+.homepage .blog-post-featured .blog-date, .homepage .blog-post-featured .post-info li a {
+  font-family: 'MuseoSansRounded', sans-serif;
+  font-size: 14px;
+  line-height: 1.667em;
+  font-weight: 300;
+  color: #a9a9a9; }
 
 /**********************
 
@@ -520,11 +560,47 @@ TITLE
   font-weight: 100;
   color: #dc4ba3; }
 
+.homepage .blog-post-featured .blog-post-title {
+  font-family: 'MuseoSansRounded', sans-serif;
+  font-size: 36px;
+  line-height: 1.167em;
+  font-weight: 500;
+  color: #555555; }
+
 /**********************
 
 TAG
 
 **********************/
+.homepage .blog-post-featured .blog-tags li {
+  font-family: 'MuseoSansRounded', sans-serif;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  display: inline-block;
+  float: left; }
+  .homepage .blog-post-featured .blog-tags li:last-of-type {
+    margin-right: 0; }
+
+.homepage .blog-post-featured .blog-tags li a {
+  -moz-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  -o-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  -webkit-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  -ms-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  background-color: #f0f0f0;
+  color: #999999;
+  margin: 0 8px 8px 0;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 1em;
+  padding: 7px 9px;
+  float: left; }
+  @media all and (min-width: 1024px) {
+    .homepage .blog-post-featured .blog-tags li a:hover {
+      background-color: #f2c0de;
+      color: #dc4ba3; } }
+
 /**********************
 
 MOLECULES
@@ -758,6 +834,71 @@ HOME
       float: left; }
     .homepage .search-page .search-blog-form .input-field {
       border: none; }
+.homepage .blog-post-featured {
+  margin-bottom: 120px;
+  overflow: hidden; }
+  .homepage .blog-post-featured .blog-post-title a {
+    -moz-transition: color 0.2s ease-in-out;
+    -o-transition: color 0.2s ease-in-out;
+    -webkit-transition: color 0.2s ease-in-out;
+    -ms-transition: color 0.2s ease-in-out;
+    transition: color 0.2s ease-in-out;
+    text-decoration: none;
+    color: #555555; }
+    @media all and (min-width: 1024px) {
+      .homepage .blog-post-featured .blog-post-title a:hover {
+        color: #dc4ba3; } }
+  .homepage .blog-post-featured .blog-tags {
+    overflow: hidden; }
+  .homepage .blog-post-featured .post-text {
+    clear: both; }
+  .homepage .blog-post-featured .read-more {
+    -moz-transition: color 0.2s ease-in-out;
+    -o-transition: color 0.2s ease-in-out;
+    -webkit-transition: color 0.2s ease-in-out;
+    -ms-transition: color 0.2s ease-in-out;
+    transition: color 0.2s ease-in-out;
+    color: #dc4ba3;
+    text-decoration: none;
+    margin-left: 18px; }
+    @media all and (min-width: 1024px) {
+      .homepage .blog-post-featured .read-more:hover {
+        color: #b3b3b3; } }
+  .homepage .blog-post-featured .post-info {
+    overflow: hidden; }
+    .homepage .blog-post-featured .post-info li {
+      float: left;
+      margin-right: 30px; }
+      .homepage .blog-post-featured .post-info li:last-of-type {
+        margin-right: 0; }
+      .homepage .blog-post-featured .post-info li a {
+        font-size: 16px;
+        color: #999999;
+        font-weight: 500;
+        text-decoration: none; }
+  .homepage .blog-post-featured .img-container {
+    float: left; }
+    .homepage .blog-post-featured .img-container .image {
+      width: 100%;
+      height: auto; }
+    @media all and (min-width: 0px) and (max-width: 599px) {
+      .homepage .blog-post-featured .img-container {
+        margin-bottom: 30px; } }
+    @media all and (min-width: 600px) and (max-width: 1023px) {
+      .homepage .blog-post-featured .img-container {
+        width: 40%; } }
+  .homepage .blog-post-featured .container-blog-featured {
+    float: right; }
+    .homepage .blog-post-featured .container-blog-featured .blog-date {
+      margin-bottom: 6px; }
+    .homepage .blog-post-featured .container-blog-featured .blog-tags {
+      margin-top: 18px; }
+    .homepage .blog-post-featured .container-blog-featured .post-info {
+      margin-top: 48px; }
+    @media all and (min-width: 600px) and (max-width: 1023px) {
+      .homepage .blog-post-featured .container-blog-featured {
+        width: calc(60% - 30px);
+        margin-left: 30px; } }
 
 /**********************
 

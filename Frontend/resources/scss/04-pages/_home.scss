@@ -5,8 +5,12 @@ HOME
 **********************/
 
 .homepage {
-	
+
 	.search-page {
 		@include search-page;
-	}	
+	}
+
+	.blog-post-featured {
+		@include blog-post-featured;
+	}
 }

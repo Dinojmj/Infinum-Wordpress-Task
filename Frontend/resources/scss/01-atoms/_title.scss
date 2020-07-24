@@ -4,6 +4,7 @@ TITLE
 
 **********************/
 
+//big pink title
 %title-01 {
 	@include font-family;
 
@@ -13,6 +14,7 @@ TITLE
 	color: $highlight-01;
 }
 
+//fetuared blog post title
 %title-02 {
 	@include font-family;
 
