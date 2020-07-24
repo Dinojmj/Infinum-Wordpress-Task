@@ -3,3 +3,10 @@
 HOME
 
 **********************/
+
+.homepage {
+	
+	.search-page {
+		@include search-page;
+	}	
+}
