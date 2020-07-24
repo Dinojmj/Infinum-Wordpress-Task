@@ -3,3 +3,9 @@
 LOGO
 
 **********************/
+
+@mixin logo {
+	display: inline-block;
+	height: 24px;
+	width: 172px;
+}
