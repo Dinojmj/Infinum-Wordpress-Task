@@ -19,3 +19,12 @@ PARAGRAPH
 
 	font-weight: 500;
 }
+
+%paragraph-blog-info {
+	@include font-family;
+
+	font-size: 14px;
+	line-height: 1.667em;
+	font-weight: 300;
+	color: $grey-09;
+}
