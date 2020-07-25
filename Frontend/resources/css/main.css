@@ -351,7 +351,7 @@ MIXINS
 GRID
 
 **********************/
-.global-footer .footer-container, .global-header, .homepage .search-page, .homepage .blog-post-featured, .homepage .blog-posts, .homepage .more-button-container {
+.global-footer .footer-container, .global-header, .homepage .search-page, .homepage .blog-post-featured, .homepage .blog-posts, .homepage .more-button-container, .blog-page .blog-cover .container-cover {
   max-width: 1140px;
   margin: 0 auto;
   padding: 0 2.5%; }
@@ -537,6 +537,15 @@ ICON
   width: 15px;
   margin-top: 3px; }
 
+.blog-page .blog-cover .container-cover p:before {
+  content: '';
+  display: inline-block;
+  height: 22px;
+  width: 22px;
+  background-image: url("../icons/ic-writer.svg");
+  margin-right: 15px;
+  vertical-align: sub; }
+
 /**********************
 
 IMAGE
@@ -552,7 +561,7 @@ LOGO
 PARAGRAPH
 
 **********************/
-.homepage .blog-post-featured .read-more, .homepage .blog-posts .read-more, .global-footer .footer-container .copy-text, .global-footer .footer-container .social-media-footer, .homepage .search-page .search-blog-form .input-field, .homepage .blog-post-featured .post-text, .homepage .blog-posts .post-text {
+.homepage .blog-post-featured .read-more, .homepage .blog-posts .read-more, .blog-page .blog-cover .container-cover a, .global-footer .footer-container .copy-text, .global-footer .footer-container .social-media-footer, .homepage .search-page .search-blog-form .input-field, .homepage .blog-post-featured .post-text, .homepage .blog-posts .post-text, .blog-page .blog-cover .container-cover p {
   font-family: 'MuseoSansRounded', sans-serif;
   font-size: 18px;
   line-height: 1.667em;
@@ -560,7 +569,7 @@ PARAGRAPH
   font-weight: 300;
   max-width: 550px; }
 
-.homepage .blog-post-featured .read-more, .homepage .blog-posts .read-more {
+.homepage .blog-post-featured .read-more, .homepage .blog-posts .read-more, .blog-page .blog-cover .container-cover a {
   font-weight: 500; }
 
 .homepage .blog-post-featured .blog-date, .homepage .blog-post-featured .post-info li a, .homepage .blog-posts .blog-date, .homepage .blog-posts .post-info li a {
@@ -595,6 +604,13 @@ TITLE
   line-height: 1.428em;
   font-weight: 500;
   color: #555555; }
+
+.blog-page .blog-cover .container-cover .title-cover {
+  font-family: 'MuseoSansRounded', sans-serif;
+  font-size: 48px;
+  line-height: 1.25em;
+  font-size: 500;
+  color: #ffffff; }
 
 /**********************
 
@@ -1223,3 +1239,85 @@ HOME
 BLOG POST
 
 **********************/
+.blog-page .blog-cover {
+  background-color: rgba(0, 0, 0, 0.35);
+  position: relative;
+  overflow: hidden; }
+  @media all and (min-width: 0px) and (max-width: 599px) {
+    .blog-page .blog-cover {
+      padding-top: 138px; } }
+  @media all and (min-width: 600px) and (max-width: 1023px) {
+    .blog-page .blog-cover {
+      padding-top: 168px; } }
+  @media all and (min-width: 1024px) {
+    .blog-page .blog-cover {
+      padding-top: 192px; } }
+  @media all and (min-width: 0px) and (max-width: 599px) {
+    .blog-page .blog-cover {
+      padding-bottom: 14px; } }
+  @media all and (min-width: 600px) and (max-width: 1023px) {
+    .blog-page .blog-cover {
+      padding-bottom: 16px; } }
+  @media all and (min-width: 1024px) {
+    .blog-page .blog-cover {
+      padding-bottom: 18px; } }
+  .blog-page .blog-cover .image-cover {
+    position: absolute;
+    z-index: -1; }
+    @media all and (min-width: 0px) and (max-width: 599px) {
+      .blog-page .blog-cover .image-cover {
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        width: 100%; } }
+    @media all and (min-width: 600px) and (max-width: 1023px) {
+      .blog-page .blog-cover .image-cover {
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        width: 100%; } }
+    @media all and (min-width: 1024px) {
+      .blog-page .blog-cover .image-cover {
+        left: 50%;
+        top: 87%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%); } }
+  .blog-page .blog-cover .container-cover {
+    text-align: center; }
+    .blog-page .blog-cover .container-cover .title-cover {
+      max-width: 620px;
+      margin: 0 auto; }
+      @media all and (min-width: 0px) and (max-width: 599px) {
+        .blog-page .blog-cover .container-cover .title-cover {
+          margin-bottom: 14px; } }
+      @media all and (min-width: 600px) and (max-width: 1023px) {
+        .blog-page .blog-cover .container-cover .title-cover {
+          margin-bottom: 16px; } }
+      @media all and (min-width: 1024px) {
+        .blog-page .blog-cover .container-cover .title-cover {
+          margin-bottom: 18px; } }
+    .blog-page .blog-cover .container-cover p {
+      color: #ffffff;
+      margin: 0 auto; }
+      @media all and (min-width: 0px) and (max-width: 599px) {
+        .blog-page .blog-cover .container-cover p {
+          margin-bottom: 78px; } }
+      @media all and (min-width: 600px) and (max-width: 1023px) {
+        .blog-page .blog-cover .container-cover p {
+          margin-bottom: 90px; } }
+      @media all and (min-width: 1024px) {
+        .blog-page .blog-cover .container-cover p {
+          margin-bottom: 102px; } }
+    .blog-page .blog-cover .container-cover a {
+      -moz-transition: color 0.2s ease-in-out;
+      -o-transition: color 0.2s ease-in-out;
+      -webkit-transition: color 0.2s ease-in-out;
+      -ms-transition: color 0.2s ease-in-out;
+      transition: color 0.2s ease-in-out;
+      color: #ffffff;
+      text-decoration: none; }
+      @media all and (min-width: 1024px) {
+        .blog-page .blog-cover .container-cover a:hover {
+          color: #f2c0de; } }

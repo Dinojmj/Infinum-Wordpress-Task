@@ -3,3 +3,10 @@
 BLOG POST
 
 **********************/
+
+.blog-page {
+
+	.blog-cover {
+		@include blog-cover;
+	}
+}

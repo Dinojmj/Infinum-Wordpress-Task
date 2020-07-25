@@ -3,3 +3,83 @@
 BLOG POST MEDIA
 
 **********************/
+
+@mixin blog-cover {
+
+	@include vs-192px(pt);
+	@include vs-18px(pb);
+	
+	background-color: rgba(0,0,0,0.35);
+	position: relative;
+	overflow: hidden;
+
+	.image-cover {
+		position: absolute;
+		z-index: -1;
+
+		@include MQ(mobile) {
+			left: 50%;
+			top: 50%;
+			-webkit-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+			width: 100%;
+		}
+
+		@include MQ(tablet) {
+			left: 50%;
+			top: 50%;
+			-webkit-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+			width: 100%;
+		}
+
+		@include MQ(desktop) {
+			left: 50%;
+			top: 87%;
+			-webkit-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+		}
+	}
+
+	.container-cover {
+		
+		@extend %grid-1140;
+
+		text-align: center;
+
+		.title-cover {
+			@extend %title-04;
+			@include vs-18px(mb);
+
+			max-width: 620px;
+			margin: 0 auto;
+		}
+
+		p {
+			@extend %paragraph-01;
+			@include vs-102px(mb);
+
+			color: $white;
+			margin: 0 auto;
+
+			&:before {
+				@extend %icon-writer;
+			}
+		}
+
+		a {
+			@extend %paragraph-02;
+			@include transition-effect(color $transition-duration $transition-effect);
+
+			color: $white;
+			text-decoration: none;
+
+			@include MQ(desktop) {
+
+				&:hover {
+					color: $highlight-02;
+				}
+			}
+		}
+	}
+}
