@@ -351,7 +351,7 @@ MIXINS
 GRID
 
 **********************/
-.global-footer .footer-container, .global-header, .homepage .search-page, .homepage .blog-post-featured, .homepage .blog-posts {
+.global-footer .footer-container, .global-header, .homepage .search-page, .homepage .blog-post-featured, .homepage .blog-posts, .homepage .more-button-container {
   max-width: 1140px;
   margin: 0 auto;
   padding: 0 2.5%; }
@@ -1178,6 +1178,45 @@ HOME
       .homepage .blog-posts .blog-container .container-blogs .post-info {
         position: absolute;
         bottom: 0; }
+.homepage .more-button-container {
+  overflow: hidden;
+  text-align: center; }
+  @media all and (min-width: 0px) and (max-width: 599px) {
+    .homepage .more-button-container {
+      margin-top: 22px; } }
+  @media all and (min-width: 600px) and (max-width: 1023px) {
+    .homepage .more-button-container {
+      margin-top: 26px; } }
+  @media all and (min-width: 1024px) {
+    .homepage .more-button-container {
+      margin-top: 30px; } }
+  @media all and (min-width: 0px) and (max-width: 599px) {
+    .homepage .more-button-container {
+      margin-bottom: 72px; } }
+  @media all and (min-width: 600px) and (max-width: 1023px) {
+    .homepage .more-button-container {
+      margin-bottom: 96px; } }
+  @media all and (min-width: 1024px) {
+    .homepage .more-button-container {
+      margin-bottom: 120px; } }
+  .homepage .more-button-container .more-button {
+    font-family: 'MuseoSansRounded', sans-serif;
+    -moz-transition: background-color 0.2s ease-in-out;
+    -o-transition: background-color 0.2s ease-in-out;
+    -webkit-transition: background-color 0.2s ease-in-out;
+    -ms-transition: background-color 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out;
+    font-size: 22px;
+    line-height: 1.2em;
+    font-weight: 500;
+    padding: 18px 78px;
+    color: #ffffff;
+    background-color: #dc4ba3;
+    text-decoration: none;
+    display: inline-block; }
+    @media all and (min-width: 1024px) {
+      .homepage .more-button-container .more-button:hover {
+        background-color: #b3b3b3; } }
 
 /**********************
 

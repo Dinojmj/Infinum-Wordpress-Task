@@ -66,3 +66,24 @@ BUTTON
 		}
 	}
 }
+
+@mixin button-load-more {
+	@include font-family;
+	@include transition-effect(background-color $transition-duration $transition-effect);
+
+	font-size: 22px;
+	line-height: 1.2em;
+	font-weight: 500;
+	padding: 18px 78px;
+	color: $white;
+	background-color: $highlight-01;
+	text-decoration: none;
+	display: inline-block;
+
+	@include MQ(desktop) {
+
+		&:hover {
+			background-color: $grey-02;
+		}
+	}
+}
