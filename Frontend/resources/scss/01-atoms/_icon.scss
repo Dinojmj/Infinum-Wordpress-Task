@@ -40,3 +40,13 @@ ICON
 	width: 15px;
 	margin-top: 3px;
 }
+
+%icon-writer {
+	content: '';
+	display: inline-block;
+	height: 22px;
+	width: 22px;
+	background-image: url('../icons/ic-writer.svg');
+	margin-right: 15px;
+	vertical-align: sub;
+}
