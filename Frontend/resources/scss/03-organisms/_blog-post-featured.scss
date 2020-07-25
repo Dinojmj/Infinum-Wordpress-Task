@@ -38,6 +38,10 @@ BLOG POST FEATURED
 			@include vs-6px(mb);
 		}
 
+		.blog-post-title {
+			@extend %title-02;
+		}
+
 		.blog-tags {
 			@include vs-18px(mt);
 		}

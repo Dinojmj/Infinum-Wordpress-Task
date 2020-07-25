@@ -6,12 +6,16 @@ BLOG POST ELEMENTS
 
 @mixin blog-post-elements {
 
+	.image {
+		@include image;
+	}
+
 	.blog-date {
 		@extend %paragraph-blog-info;
 	}
 
 	.blog-post-title {
-		@extend %title-02;
+		@extend %title-03;
 
 		a {
 			@include transition-effect(color $transition-duration $transition-effect);

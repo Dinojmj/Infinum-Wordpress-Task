@@ -13,4 +13,8 @@ HOME
 	.blog-post-featured {
 		@include blog-post-featured;
 	}
+
+	.blog-posts {
+		@include blog-posts;
+	}
 }
