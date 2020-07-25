@@ -7,239 +7,815 @@ VERTICAL SPACING
 //MIXIN 6px
 @mixin vs-6px($case) {
 
+	$vs-6px-m: 4px;
+	$vs-6px-t: 5px;
+	$vs-6px-d: 6px;
+
 	@if $case == ("mt") {
-		margin-top: 6px;
+
+		@include MQ(mobile) {
+			margin-top: $vs-6px-m;
+		}
+
+		@include MQ(tablet) {
+			margin-top: $vs-6px-t;
+		}
+
+		@include MQ(desktop) {
+			margin-top: $vs-6px-d;
+		}	
 	}
 
 	@if $case == ("mb") {
-		margin-bottom: 6px;
+
+		@include MQ(mobile) {
+			margin-bottom: $vs-6px-m;
+		}
+
+		@include MQ(tablet) {
+			margin-bottom: $vs-6px-t;
+		}
+
+		@include MQ(desktop) {
+			margin-bottom: $vs-6px-d;
+		}
 	}
 
 	@if $case == ("pt") {
-		padding-top: 6px;
+
+		@include MQ(mobile) {
+			padding-top: $vs-6px-m;
+		}
+
+		@include MQ(tablet) {
+			padding-top: $vs-6px-t;
+		}
+
+		@include MQ(desktop) {
+			padding-top: $vs-6px-d;
+		}
 	}
 
 	@if $case == ("pb") {
-		padding-bottom: 6px
+		
+		@include MQ(mobile) {
+			padding-bottom: $vs-6px-m;
+		}
+
+		@include MQ(tablet) {
+			padding-bottom: $vs-6px-t;
+		}
+
+		@include MQ(desktop) {
+			padding-bottom: $vs-6px-d;
+		}
 	}
 }
 
 //MIXIN 12px
 @mixin vs-12px($case) {
 
+	$vs-12px-m: 8px;
+	$vs-12px-t: 10px;
+	$vs-12px-d: 12px;
+
 	@if $case == ("mt") {
-		margin-top: 12px;
+
+		@include MQ(mobile) {
+			margin-top: $vs-12px-m;
+		}
+
+		@include MQ(tablet) {
+			margin-top: $vs-12px-t;
+		}
+
+		@include MQ(desktop) {
+			margin-top: $vs-12px-d;
+		}	
 	}
 
 	@if $case == ("mb") {
-		margin-bottom: 12px;
+
+		@include MQ(mobile) {
+			margin-bottom: $vs-12px-m;
+		}
+
+		@include MQ(tablet) {
+			margin-bottom: $vs-12px-t;
+		}
+
+		@include MQ(desktop) {
+			margin-bottom: $vs-12px-d;
+		}
 	}
 
 	@if $case == ("pt") {
-		padding-top: 12px;
+
+		@include MQ(mobile) {
+			padding-top: $vs-12px-m;
+		}
+
+		@include MQ(tablet) {
+			padding-top: $vs-12px-t;
+		}
+
+		@include MQ(desktop) {
+			padding-top: $vs-12px-d;
+		}
 	}
 
 	@if $case == ("pb") {
-		padding-bottom: 12px
+		
+		@include MQ(mobile) {
+			padding-bottom: $vs-12px-m;
+		}
+
+		@include MQ(tablet) {
+			padding-bottom: $vs-12px-t;
+		}
+
+		@include MQ(desktop) {
+			padding-bottom: $vs-12px-d;
+		}
 	}
 }
 
 //MIXIN 18px
 @mixin vs-18px($case) {
 
+	$vs-18px-m: 14px;
+	$vs-18px-t: 16px;
+	$vs-18px-d: 18px;
+
 	@if $case == ("mt") {
-		margin-top: 18px;
+
+		@include MQ(mobile) {
+			margin-top: $vs-18px-m;
+		}
+
+		@include MQ(tablet) {
+			margin-top: $vs-18px-t;
+		}
+
+		@include MQ(desktop) {
+			margin-top: $vs-18px-d;
+		}	
 	}
 
 	@if $case == ("mb") {
-		margin-bottom: 18px;
+
+		@include MQ(mobile) {
+			margin-bottom: $vs-18px-m;
+		}
+
+		@include MQ(tablet) {
+			margin-bottom: $vs-18px-t;
+		}
+
+		@include MQ(desktop) {
+			margin-bottom: $vs-18px-d;
+		}
 	}
 
 	@if $case == ("pt") {
-		padding-top: 18px;
+
+		@include MQ(mobile) {
+			padding-top: $vs-18px-m;
+		}
+
+		@include MQ(tablet) {
+			padding-top: $vs-18px-t;
+		}
+
+		@include MQ(desktop) {
+			padding-top: $vs-18px-d;
+		}
 	}
 
 	@if $case == ("pb") {
-		padding-bottom: 18px
+		
+		@include MQ(mobile) {
+			padding-bottom: $vs-18px-m;
+		}
+
+		@include MQ(tablet) {
+			padding-bottom: $vs-18px-t;
+		}
+
+		@include MQ(desktop) {
+			padding-bottom: $vs-18px-d;
+		}
 	}
 }
 
 //MIXIN 24px
 @mixin vs-24px($case) {
 
+	$vs-24px-m: 16px;
+	$vs-24px-t: 20px;
+	$vs-24px-d: 24px;
+
 	@if $case == ("mt") {
-		margin-top: 24px;
+
+		@include MQ(mobile) {
+			margin-top: $vs-24px-m;
+		}
+
+		@include MQ(tablet) {
+			margin-top: $vs-24px-t;
+		}
+
+		@include MQ(desktop) {
+			margin-top: $vs-24px-d;
+		}	
 	}
 
 	@if $case == ("mb") {
-		margin-bottom: 24px;
+
+		@include MQ(mobile) {
+			margin-bottom: $vs-24px-m;
+		}
+
+		@include MQ(tablet) {
+			margin-bottom: $vs-24px-t;
+		}
+
+		@include MQ(desktop) {
+			margin-bottom: $vs-24px-d;
+		}
 	}
 
 	@if $case == ("pt") {
-		padding-top: 24px;
+
+		@include MQ(mobile) {
+			padding-top: $vs-24px-m;
+		}
+
+		@include MQ(tablet) {
+			padding-top: $vs-24px-t;
+		}
+
+		@include MQ(desktop) {
+			padding-top: $vs-24px-d;
+		}
 	}
 
 	@if $case == ("pb") {
-		padding-bottom: 24px
+		
+		@include MQ(mobile) {
+			padding-bottom: $vs-24px-m;
+		}
+
+		@include MQ(tablet) {
+			padding-bottom: $vs-24px-t;
+		}
+
+		@include MQ(desktop) {
+			padding-bottom: $vs-24px-d;
+		}
 	}
 }
 
 //MIXIN 30px
 @mixin vs-30px($case) {
 
+	$vs-30px-m: 22px;
+	$vs-30px-t: 26px;
+	$vs-30px-d: 30px;
+
 	@if $case == ("mt") {
-		margin-top: 30px;
+
+		@include MQ(mobile) {
+			margin-top: $vs-30px-m;
+		}
+
+		@include MQ(tablet) {
+			margin-top: $vs-30px-t;
+		}
+
+		@include MQ(desktop) {
+			margin-top: $vs-30px-d;
+		}	
 	}
 
 	@if $case == ("mb") {
-		margin-bottom: 30px;
+
+		@include MQ(mobile) {
+			margin-bottom: $vs-30px-m;
+		}
+
+		@include MQ(tablet) {
+			margin-bottom: $vs-30px-t;
+		}
+
+		@include MQ(desktop) {
+			margin-bottom: $vs-30px-d;
+		}
 	}
 
 	@if $case == ("pt") {
-		padding-top: 30px;
+
+		@include MQ(mobile) {
+			padding-top: $vs-30px-m;
+		}
+
+		@include MQ(tablet) {
+			padding-top: $vs-30px-t;
+		}
+
+		@include MQ(desktop) {
+			padding-top: $vs-30px-d;
+		}
 	}
 
 	@if $case == ("pb") {
-		padding-bottom: 30px
+		
+		@include MQ(mobile) {
+			padding-bottom: $vs-30px-m;
+		}
+
+		@include MQ(tablet) {
+			padding-bottom: $vs-30px-t;
+		}
+
+		@include MQ(desktop) {
+			padding-bottom: $vs-30px-d;
+		}
 	}
 }
 
 //MIXIN 36px
 @mixin vs-36px($case) {
 
+	$vs-36px-m: 24px;
+	$vs-36px-t: 30px;
+	$vs-36px-d: 36px;
+
 	@if $case == ("mt") {
-		margin-top: 36px;
+
+		@include MQ(mobile) {
+			margin-top: $vs-36px-m;
+		}
+
+		@include MQ(tablet) {
+			margin-top: $vs-36px-t;
+		}
+
+		@include MQ(desktop) {
+			margin-top: $vs-36px-d;
+		}	
 	}
 
 	@if $case == ("mb") {
-		margin-bottom: 36px;
+
+		@include MQ(mobile) {
+			margin-bottom: $vs-36px-m;
+		}
+
+		@include MQ(tablet) {
+			margin-bottom: $vs-36px-t;
+		}
+
+		@include MQ(desktop) {
+			margin-bottom: $vs-36px-d;
+		}
 	}
 
 	@if $case == ("pt") {
-		padding-top: 36px;
+
+		@include MQ(mobile) {
+			padding-top: $vs-36px-m;
+		}
+
+		@include MQ(tablet) {
+			padding-top: $vs-36px-t;
+		}
+
+		@include MQ(desktop) {
+			padding-top: $vs-36px-d;
+		}
 	}
 
 	@if $case == ("pb") {
-		padding-bottom: 36px
+		
+		@include MQ(mobile) {
+			padding-bottom: $vs-36px-m;
+		}
+
+		@include MQ(tablet) {
+			padding-bottom: $vs-36px-t;
+		}
+
+		@include MQ(desktop) {
+			padding-bottom: $vs-36px-d;
+		}
 	}
 }
 
 //MIXIN 42px
 @mixin vs-42px($case) {
 
+	$vs-42px-m: 30px;
+	$vs-42px-t: 36px;
+	$vs-42px-d: 42px;
+
 	@if $case == ("mt") {
-		margin-top: 42px;
+
+		@include MQ(mobile) {
+			margin-top: $vs-42px-m;
+		}
+
+		@include MQ(tablet) {
+			margin-top: $vs-42px-t;
+		}
+
+		@include MQ(desktop) {
+			margin-top: $vs-42px-d;
+		}	
 	}
 
 	@if $case == ("mb") {
-		margin-bottom: 42px;
+
+		@include MQ(mobile) {
+			margin-bottom: $vs-42px-m;
+		}
+
+		@include MQ(tablet) {
+			margin-bottom: $vs-42px-t;
+		}
+
+		@include MQ(desktop) {
+			margin-bottom: $vs-42px-d;
+		}
 	}
 
 	@if $case == ("pt") {
-		padding-top: 42px;
+
+		@include MQ(mobile) {
+			padding-top: $vs-42px-m;
+		}
+
+		@include MQ(tablet) {
+			padding-top: $vs-42px-t;
+		}
+
+		@include MQ(desktop) {
+			padding-top: $vs-42px-d;
+		}
 	}
 
 	@if $case == ("pb") {
-		padding-bottom: 42px
+		
+		@include MQ(mobile) {
+			padding-bottom: $vs-42px-m;
+		}
+
+		@include MQ(tablet) {
+			padding-bottom: $vs-42px-t;
+		}
+
+		@include MQ(desktop) {
+			padding-bottom: $vs-42px-d;
+		}
 	}
 }
 
 //MIXIN 48px
 @mixin vs-48px($case) {
 
+	$vs-48px-m: 32px;
+	$vs-48px-t: 40px;
+	$vs-48px-d: 48px;
+
 	@if $case == ("mt") {
-		margin-top: 48px;
+
+		@include MQ(mobile) {
+			margin-top: $vs-48px-m;
+		}
+
+		@include MQ(tablet) {
+			margin-top: $vs-48px-t;
+		}
+
+		@include MQ(desktop) {
+			margin-top: $vs-48px-d;
+		}	
 	}
 
 	@if $case == ("mb") {
-		margin-bottom: 48px;
+
+		@include MQ(mobile) {
+			margin-bottom: $vs-48px-m;
+		}
+
+		@include MQ(tablet) {
+			margin-bottom: $vs-48px-t;
+		}
+
+		@include MQ(desktop) {
+			margin-bottom: $vs-48px-d;
+		}
 	}
 
 	@if $case == ("pt") {
-		padding-top: 48px;
+
+		@include MQ(mobile) {
+			padding-top: $vs-48px-m;
+		}
+
+		@include MQ(tablet) {
+			padding-top: $vs-48px-t;
+		}
+
+		@include MQ(desktop) {
+			padding-top: $vs-48px-d;
+		}
 	}
 
 	@if $case == ("pb") {
-		padding-bottom: 48px
+		
+		@include MQ(mobile) {
+			padding-bottom: $vs-48px-m;
+		}
+
+		@include MQ(tablet) {
+			padding-bottom: $vs-48px-t;
+		}
+
+		@include MQ(desktop) {
+			padding-bottom: $vs-48px-d;
+		}
 	}
 }
 
 //MIXIN 60px
 @mixin vs-60px($case) {
 
+	$vs-60px-m: 36px;
+	$vs-60px-t: 48px;
+	$vs-60px-d: 60px;
+
 	@if $case == ("mt") {
-		margin-top: 60px;
+
+		@include MQ(mobile) {
+			margin-top: $vs-60px-m;
+		}
+
+		@include MQ(tablet) {
+			margin-top: $vs-60px-t;
+		}
+
+		@include MQ(desktop) {
+			margin-top: $vs-60px-d;
+		}	
 	}
 
 	@if $case == ("mb") {
-		margin-bottom: 60px;
+
+		@include MQ(mobile) {
+			margin-bottom: $vs-60px-m;
+		}
+
+		@include MQ(tablet) {
+			margin-bottom: $vs-60px-t;
+		}
+
+		@include MQ(desktop) {
+			margin-bottom: $vs-60px-d;
+		}
 	}
 
 	@if $case == ("pt") {
-		padding-top: 60px;
+
+		@include MQ(mobile) {
+			padding-top: $vs-60px-m;
+		}
+
+		@include MQ(tablet) {
+			padding-top: $vs-60px-t;
+		}
+
+		@include MQ(desktop) {
+			padding-top: $vs-60px-d;
+		}
 	}
 
 	@if $case == ("pb") {
-		padding-bottom: 60px
+		
+		@include MQ(mobile) {
+			padding-bottom: $vs-60px-m;
+		}
+
+		@include MQ(tablet) {
+			padding-bottom: $vs-60px-t;
+		}
+
+		@include MQ(desktop) {
+			padding-bottom: $vs-60px-d;
+		}
 	}
 }
 
 //MIXIN 78px
 @mixin vs-78px($case) {
 
+	$vs-78px-m: 40px;
+	$vs-78px-t: 54px;
+	$vs-78px-d: 78px;
+
 	@if $case == ("mt") {
-		margin-top: 78px;
+
+		@include MQ(mobile) {
+			margin-top: $vs-78px-m;
+		}
+
+		@include MQ(tablet) {
+			margin-top: $vs-78px-t;
+		}
+
+		@include MQ(desktop) {
+			margin-top: $vs-78px-d;
+		}	
 	}
 
 	@if $case == ("mb") {
-		margin-bottom: 78px;
+
+		@include MQ(mobile) {
+			margin-bottom: $vs-78px-m;
+		}
+
+		@include MQ(tablet) {
+			margin-bottom: $vs-78px-t;
+		}
+
+		@include MQ(desktop) {
+			margin-bottom: $vs-78px-d;
+		}
 	}
 
 	@if $case == ("pt") {
-		padding-top: 78px;
+
+		@include MQ(mobile) {
+			padding-top: $vs-78px-m;
+		}
+
+		@include MQ(tablet) {
+			padding-top: $vs-78px-t;
+		}
+
+		@include MQ(desktop) {
+			padding-top: $vs-78px-d;
+		}
 	}
 
 	@if $case == ("pb") {
-		padding-bottom: 78px
+		
+		@include MQ(mobile) {
+			padding-bottom: $vs-78px-m;
+		}
+
+		@include MQ(tablet) {
+			padding-bottom: $vs-78px-t;
+		}
+
+		@include MQ(desktop) {
+			padding-bottom: $vs-78px-d;
+		}
 	}
 }
 
 //MIXIN 90px
 @mixin vs-90px($case) {
 
+	$vs-90px-m: 48px;
+	$vs-90px-t: 72px;
+	$vs-90px-d: 90px;
+
 	@if $case == ("mt") {
-		margin-top: 90px;
+
+		@include MQ(mobile) {
+			margin-top: $vs-90px-m;
+		}
+
+		@include MQ(tablet) {
+			margin-top: $vs-90px-t;
+		}
+
+		@include MQ(desktop) {
+			margin-top: $vs-90px-d;
+		}	
 	}
 
 	@if $case == ("mb") {
-		margin-bottom: 90px;
+
+		@include MQ(mobile) {
+			margin-bottom: $vs-90px-m;
+		}
+
+		@include MQ(tablet) {
+			margin-bottom: $vs-90px-t;
+		}
+
+		@include MQ(desktop) {
+			margin-bottom: $vs-90px-d;
+		}
 	}
 
 	@if $case == ("pt") {
-		padding-top: 90px;
+
+		@include MQ(mobile) {
+			padding-top: $vs-90px-m;
+		}
+
+		@include MQ(tablet) {
+			padding-top: $vs-90px-t;
+		}
+
+		@include MQ(desktop) {
+			padding-top: $vs-90px-d;
+		}
 	}
 
 	@if $case == ("pb") {
-		padding-bottom: 90px
+		
+		@include MQ(mobile) {
+			padding-bottom: $vs-90px-m;
+		}
+
+		@include MQ(tablet) {
+			padding-bottom: $vs-90px-t;
+		}
+
+		@include MQ(desktop) {
+			padding-bottom: $vs-90px-d;
+		}
 	}
 }
 
 //MIXIN 120px
 @mixin vs-120px($case) {
 
+	$vs-120px-m: 72px;
+	$vs-120px-t: 96px;
+	$vs-120px-d: 120px;
+
 	@if $case == ("mt") {
-		margin-top: 120px;
+
+		@include MQ(mobile) {
+			margin-top: $vs-120px-m;
+		}
+
+		@include MQ(tablet) {
+			margin-top: $vs-120px-t;
+		}
+
+		@include MQ(desktop) {
+			margin-top: $vs-120px-d;
+		}	
 	}
 
 	@if $case == ("mb") {
-		margin-bottom: 120px;
+
+		@include MQ(mobile) {
+			margin-bottom: $vs-120px-m;
+		}
+
+		@include MQ(tablet) {
+			margin-bottom: $vs-120px-t;
+		}
+
+		@include MQ(desktop) {
+			margin-bottom: $vs-120px-d;
+		}
 	}
 
 	@if $case == ("pt") {
-		padding-top: 120px;
+
+		@include MQ(mobile) {
+			padding-top: $vs-120px-m;
+		}
+
+		@include MQ(tablet) {
+			padding-top: $vs-120px-t;
+		}
+
+		@include MQ(desktop) {
+			padding-top: $vs-120px-d;
+		}
 	}
 
 	@if $case == ("pb") {
-		padding-bottom: 120px
+		
+		@include MQ(mobile) {
+			padding-bottom: $vs-120px-m;
+		}
+
+		@include MQ(tablet) {
+			padding-bottom: $vs-120px-t;
+		}
+
+		@include MQ(desktop) {
+			padding-bottom: $vs-120px-d;
+		}
 	}
 }
