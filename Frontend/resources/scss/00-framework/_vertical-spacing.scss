@@ -752,6 +752,74 @@ VERTICAL SPACING
 	}
 }
 
+//MIXIN 102px
+@mixin vs-102px($case) {
+
+	$vs-102px-m: 78px;
+	$vs-102px-t: 90px;
+	$vs-102px-d: 102px;
+
+	@if $case == ("mt") {
+
+		@include MQ(mobile) {
+			margin-top: $vs-102px-m;
+		}
+
+		@include MQ(tablet) {
+			margin-top: $vs-102px-t;
+		}
+
+		@include MQ(desktop) {
+			margin-top: $vs-102px-d;
+		}	
+	}
+
+	@if $case == ("mb") {
+
+		@include MQ(mobile) {
+			margin-bottom: $vs-102px-m;
+		}
+
+		@include MQ(tablet) {
+			margin-bottom: $vs-102px-t;
+		}
+
+		@include MQ(desktop) {
+			margin-bottom: $vs-102px-d;
+		}
+	}
+
+	@if $case == ("pt") {
+
+		@include MQ(mobile) {
+			padding-top: $vs-102px-m;
+		}
+
+		@include MQ(tablet) {
+			padding-top: $vs-102px-t;
+		}
+
+		@include MQ(desktop) {
+			padding-top: $vs-102px-d;
+		}
+	}
+
+	@if $case == ("pb") {
+		
+		@include MQ(mobile) {
+			padding-bottom: $vs-102px-m;
+		}
+
+		@include MQ(tablet) {
+			padding-bottom: $vs-102px-t;
+		}
+
+		@include MQ(desktop) {
+			padding-bottom: $vs-102px-d;
+		}
+	}
+}
+
 //MIXIN 120px
 @mixin vs-120px($case) {
 
@@ -816,6 +884,74 @@ VERTICAL SPACING
 
 		@include MQ(desktop) {
 			padding-bottom: $vs-120px-d;
+		}
+	}
+}
+
+//MIXIN 192px
+@mixin vs-192px($case) {
+
+	$vs-192px-m: 138px;
+	$vs-192px-t: 168px;
+	$vs-192px-d: 192px;
+
+	@if $case == ("mt") {
+
+		@include MQ(mobile) {
+			margin-top: $vs-192px-m;
+		}
+
+		@include MQ(tablet) {
+			margin-top: $vs-192px-t;
+		}
+
+		@include MQ(desktop) {
+			margin-top: $vs-192px-d;
+		}	
+	}
+
+	@if $case == ("mb") {
+
+		@include MQ(mobile) {
+			margin-bottom: $vs-192px-m;
+		}
+
+		@include MQ(tablet) {
+			margin-bottom: $vs-192px-t;
+		}
+
+		@include MQ(desktop) {
+			margin-bottom: $vs-192px-d;
+		}
+	}
+
+	@if $case == ("pt") {
+
+		@include MQ(mobile) {
+			padding-top: $vs-192px-m;
+		}
+
+		@include MQ(tablet) {
+			padding-top: $vs-192px-t;
+		}
+
+		@include MQ(desktop) {
+			padding-top: $vs-192px-d;
+		}
+	}
+
+	@if $case == ("pb") {
+		
+		@include MQ(mobile) {
+			padding-bottom: $vs-192px-m;
+		}
+
+		@include MQ(tablet) {
+			padding-bottom: $vs-192px-t;
+		}
+
+		@include MQ(desktop) {
+			padding-bottom: $vs-192px-d;
 		}
 	}
 }
