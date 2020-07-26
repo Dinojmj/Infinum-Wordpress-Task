@@ -9,4 +9,12 @@ BLOG POST
 	.blog-cover {
 		@include blog-cover;
 	}
+
+	.blog-single {
+		@include blog-post-single;
+	}
+
+	.related-post {
+		@include related-post;
+	}
 }

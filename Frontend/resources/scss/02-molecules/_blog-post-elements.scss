@@ -52,19 +52,9 @@ BLOG POST ELEMENTS
 	}
 
 	.read-more {
-		@extend %paragraph-02;
-		@include transition-effect(color $transition-duration $transition-effect);
+		@extend %read-more;
 
 		color: $highlight-01;
-		text-decoration: none;
-		margin-left: 18px;
-
-		@include MQ(desktop) {
-					
-			&:hover {
-				color: $grey-02;
-			}
-		}
 	}
 
 	.post-info {
@@ -99,6 +89,155 @@ BLOG POST ELEMENTS
 				&:before {
 					@extend %icon-comment;
 				}
+			}
+		}
+	}
+}
+
+//Mixin for qoute
+@mixin qoute {
+	@include font-family;
+	@include vs-60px(pt);
+	@include vs-48px(pb);
+
+	font-size: 30px;
+	line-height: 1.6em;
+	font-weight: 300;
+	max-width: 400px;
+	color: $highlight-01;
+	text-align: center;
+
+	@include MQ(mobile) {
+		display: block;
+		margin: 0 auto;
+	}
+
+	@include MQ(tablet) {
+		display: block;
+		margin: 0 auto;
+	}
+}
+
+//Single blog post
+@mixin blog-post-single {
+	overflow: hidden;
+
+	.play-button {
+		@extend %play-button;
+	}
+
+	.blog-container {
+		@extend %grid-560;
+	}
+
+	.media-container {
+		@extend %grid-946;
+		@include vs-48px(mt);
+
+		.image {
+			@include image;
+		}
+	}
+
+	@include vs-48px(mt);
+
+	p {
+		@extend %paragraph-02;
+		@include vs-18px(mb);
+
+		span {
+			color: $highlight-01;
+		}
+	}
+
+	.caption {
+		@include font-family;
+		@include vs-18px(mt);
+
+		font-size: 16px;
+		font-weight: 500;
+		line-height: 1.25em;
+		color: $grey-05;
+		text-align: center;
+		max-width: none;
+	}
+
+	h1 {
+		@extend %title-05;
+		@include vs-30px(mb);
+		@include vs-60px(mt);
+	}
+
+	h2 {
+		@extend %title-05;
+		@include vs-30px(mb);
+		@include vs-30px(mt);
+
+		font-size: 28px;
+	}
+
+	h3 {
+		@extend %title-05;
+		@include vs-24px(mb);
+		@include vs-24px(mt);
+
+		font-size: 26px;
+	}
+
+	h4 {
+		@extend %title-05;
+		@include vs-24px(mb);
+		@include vs-24px(mt);
+
+		font-size: 24px;
+	}
+
+	h5 {
+		@extend %title-05;
+		@include vs-18px(mb);
+		@include vs-18px(mt);
+
+		font-size: 22px;
+	}
+
+	h6 {
+		@extend %title-05;
+		@include vs-18px(mb);
+		@include vs-18px(mt);
+
+		font-size: 20px;
+	}
+
+	.qoute-r {
+
+		@include qoute;
+
+		@include MQ(desktop) {
+			margin-right: -280px;
+			float: right;
+			padding-left: 60px;
+		}
+	}
+
+	.qoute-l {
+
+		@include qoute;
+
+		@include MQ(desktop) {
+			margin-left: -280px;
+			float: left;
+			padding-right: 60px;
+		}
+	}
+
+	.blog-tags {
+
+		li {
+
+			@extend %blog-tag;
+
+			a {
+				@extend %blog-tag-style;
 			}
 		}
 	}
