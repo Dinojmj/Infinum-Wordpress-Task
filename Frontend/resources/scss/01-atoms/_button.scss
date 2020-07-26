@@ -56,6 +56,7 @@ BUTTON
 	&:before {
 		width: 21px;
 		background-image: url('../icons/ic-unicorn.svg');
+		background-repeat: no-repeat;
 		margin-top: 2px;
 	}
 
@@ -84,6 +85,36 @@ BUTTON
 
 		&:hover {
 			background-color: $grey-02;
+		}
+	}
+}
+
+@mixin play-button {
+	content: '';
+	display: block;
+	height: 94px;
+	width: 94px;
+	background-image: url('../icons/ic-play.svg');
+	background-repeat: no-repeat;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	cursor: pointer;
+}
+
+%read-more {
+	@extend %paragraph-02;
+	@include transition-effect(color $transition-duration $transition-effect);
+
+	color: $highlight-01;
+	text-decoration: none;
+	margin-left: 18px;
+
+	@include MQ(desktop) {
+				
+		&:hover {
+			color: $grey-02;
 		}
 	}
 }
