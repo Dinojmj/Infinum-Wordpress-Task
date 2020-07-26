@@ -11,6 +11,7 @@ GLOBAL FOOTER
 	overflow: hidden;
 	background-color: $grey-06;
 	border-top: 1px solid $grey-08;
+	clear: both;
 
 	.footer-container {
 		@include global-footer-elements;
