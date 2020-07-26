@@ -1,0 +1,129 @@
+/**********************
+
+GLOBAL HEADER ELEMENTS
+
+**********************/
+
+@mixin global-header-elements {
+	overflow: hidden;
+
+	.logo {
+		@include logo;
+
+		float: left;
+
+		.image {
+			@include image;
+		}
+	}
+
+	nav {
+		float: right;
+
+		li {
+			float: left;
+			display: inline-block;
+
+			.home {
+				@include font-family;
+				@include transition-effect(color $transition-duration $transition-effect);
+
+				font-size: 17px;
+				line-height: 57px;
+				font-weight: 700;
+				color: $grey-03;
+				text-decoration: none;
+				margin-right: 70px;
+
+				@include MQ(desktop) {
+					&:hover {
+						color: $highlight-01;
+					}
+				}
+			}
+
+			.button-pink {
+				@extend %button-pink; 
+
+				margin-right: 25px;
+			}
+
+			.button-grey {
+				@extend %button-grey; 
+			}
+		}
+	}
+
+	@include MQ(mobile) {
+		
+		.logo {
+			float: none;
+			display: block;
+			margin: 0 auto;
+		}
+
+		nav {
+			@include vs-18px(mt);
+			clear: both;
+			float: none;
+
+			li {
+				@include vs-6px(mb);
+
+				display: block;
+				float: none;
+
+				&:last-of-type {
+					margin-bottom: 0;
+				}
+
+				.home {
+					display: block;
+					margin-right: 0;
+					padding: 16px 29px;
+					line-height: 1.2em;
+				}
+
+				.button-pink {
+					display: block;
+					margin-right: 0;
+				}
+
+				.button-grey {
+					display: block;
+				}
+			}
+		}
+	}
+
+	@include MQ(tablet) {
+		
+		.logo {
+			float: none;
+			display: block;
+			margin: 0 auto;
+		}
+
+		nav {
+			@include vs-24px(mt);
+			clear: both;
+			float: none;
+
+			ul {
+				overflow: hidden;
+				width: fit-content;
+				margin: 0 auto;
+			}
+		}
+	}
+
+	@include MQ(desktop) {
+		position: relative;
+
+		.logo {
+			position: absolute;
+	  		top: 50%;
+			transform: translate(0, -50%);
+		}
+	}
+}

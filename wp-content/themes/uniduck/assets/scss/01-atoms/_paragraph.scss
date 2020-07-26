@@ -1,0 +1,30 @@
+/**********************
+
+PARAGRAPH
+
+**********************/
+
+%paragraph-01 {
+	@include font-family;
+
+	font-size: 18px;
+	line-height: 1.667em;
+	color: $grey-03;
+	font-weight: 300;
+	max-width: 550px;
+}
+
+%paragraph-02 {
+	@extend %paragraph-01;
+
+	font-weight: 500;
+}
+
+%paragraph-blog-info {
+	@include font-family;
+
+	font-size: 14px;
+	line-height: 1.667em;
+	font-weight: 300;
+	color: $grey-09;
+}

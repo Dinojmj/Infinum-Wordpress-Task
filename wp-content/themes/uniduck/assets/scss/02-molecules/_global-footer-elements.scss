@@ -1,0 +1,94 @@
+/**********************
+
+GLOBAL FOOTER ELEMENTS
+
+**********************/
+
+@mixin global-footer-elements {
+
+	.logo-container {
+		overflow: hidden;
+		display: inline-block;
+		float: left;
+	
+		.logo {
+			@include logo;
+
+			float: left;
+
+			.image {
+				@include image;
+			}
+		}
+
+		@include MQ(desktop) {
+			margin-left: 100px;
+		}
+	}
+
+	.copy-text {
+		@extend %paragraph-01;
+		@include vs-18px(mt);
+
+		float: left;
+		clear: both;
+		color: $grey-07;
+	}
+
+	.social-media-footer {
+		@extend %paragraph-01;
+
+		color: $grey-07;
+		float: right;
+
+		li {
+			@include vs-6px(mb);
+
+			text-align: right;
+
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+
+			a {
+				text-decoration: none;
+				color: $highlight-01;
+			}
+
+			.facebook {
+				@extend %icon-foundation;
+
+				height: 20px;
+				margin-top: 4px;
+				background-image: url('../icons/ic-facebook.svg');
+				
+			}
+
+			.twitter {
+				@extend %icon-foundation;
+
+				height: 18px;
+				margin-top: 6px;
+				background-image: url('../icons/ic-twitter.svg');
+			}
+
+			.instagram {
+				@extend %icon-foundation;
+
+				height: 20px;
+				margin-top: 4px;
+				background-image: url('../icons/ic-instagram.svg');
+			}
+		}
+
+		@include MQ(desktop) {
+			margin-right: 100px;
+		}
+
+		@include MQ(mobile) {
+			@include vs-30px(mt);
+			clear: both;
+			float: left;
+		}
+	}
+}

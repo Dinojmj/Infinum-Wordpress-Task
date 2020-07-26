@@ -1,0 +1,52 @@
+/**********************
+
+ICON
+
+**********************/
+
+%icon-foundation {
+	content: '';
+	display: inline-block;
+	width: 20px;
+	overflow: hidden;
+	float: right;
+    margin-left: 12px;
+    background-repeat: no-repeat;
+}
+
+@mixin icon-blog-foundation {
+	color: $grey-01;
+	background-repeat: no-repeat;
+	float: left;
+	display: block;
+	content: '';
+	margin-right: 12px;
+}
+
+%icon-favorite {
+	@include icon-blog-foundation;
+
+	background-image: url('../icons/ic-heart.svg');
+	height: 12px;
+	width: 13px;
+	margin-top: 5px;
+}
+
+%icon-comment {
+	@include icon-blog-foundation;
+
+	background-image: url('../icons/ic-comment.svg');
+	height: 14px;
+	width: 15px;
+	margin-top: 3px;
+}
+
+%icon-writer {
+	content: '';
+	display: inline-block;
+	height: 22px;
+	width: 22px;
+	background-image: url('../icons/ic-writer.svg');
+	margin-right: 15px;
+	vertical-align: sub;
+}

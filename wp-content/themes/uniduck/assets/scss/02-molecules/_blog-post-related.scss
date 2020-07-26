@@ -1,0 +1,64 @@
+/**********************
+
+BLOG POST RELATED
+
+**********************/
+
+@mixin related-post {
+
+	@extend %grid-560;
+	@include vs-60px(mt);
+	@include vs-120px(mb);
+
+	overflow: hidden;
+
+	.image {
+
+		@extend %grid-50;
+
+		float: left;
+
+		@include MQ(mobile) {
+
+			@include vs-30px(mb);
+		}
+	}
+
+	.container-related {
+
+		@extend %grid-50;
+
+		float: right;
+	}
+
+	.related-title {
+
+		@extend %title-06;
+		@include vs-48px(mb);
+
+		color: $highlight-01;
+		text-align: center;
+	}
+
+	.blog-title {
+
+		@extend %title-06;
+		@include vs-12px(mb);
+
+		color: $grey-03;
+	}
+
+	p {
+
+		@extend %paragraph-02;
+		@include vs-18px(mb);
+	}
+
+	.read-more {
+
+		@extend %read-more;
+
+		margin-left: 0;
+		color: $highlight-01;
+	}
+}

@@ -1,0 +1,61 @@
+/**********************
+
+TITLE
+
+**********************/
+
+//big pink title
+%title-01 {
+	@include font-family;
+
+	font-size: 48px;
+	line-height: 1.167em;;
+	font-weight: 100;
+	color: $highlight-01;
+}
+
+//fetuared blog post title
+%title-02 {
+	@include font-family;
+
+	font-size: 36px;
+	line-height: 1.167em;
+	font-weight: 500;
+	color: $grey-03;
+}
+
+%title-03 {
+	@include font-family;
+
+	font-size: 28px;
+	line-height: 1.428em;
+	font-weight: 500;
+	color: $grey-03;
+}
+
+%title-04 {
+	@include font-family;
+
+	font-size: 48px;
+	line-height: 1.25em;
+	font-size: 500;
+	color: $white;
+}
+
+%title-05 {
+	@include font-family;
+
+	font-size: 30px;
+	line-height: 1.167em;
+	font-weight: 700;
+	letter-spacing: 1px;
+	color: $grey-03;
+}
+
+%title-06 {
+	@include font-family;
+
+	font-size: 28px;
+	line-height: 1.05em;
+	font-weight: 500;
+}
