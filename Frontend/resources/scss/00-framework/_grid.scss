@@ -11,7 +11,7 @@ GRID
 }
 
 %grid-50 {
-	width: calc(( 100% * 1/2 ) - 40px );
+	width: calc(( 100% * 1/2 ) - 30px );
 
 	@include MQ(mobile) {
 		width: 100%;
@@ -52,4 +52,18 @@ GRID
 	@include MQ(mobile) {
 		width: 100%;
 	}
+}
+
+%grid-560 {
+	max-width: 560px;
+	padding: 0 2.5%;
+	margin: 0 auto;
+	clear: both;
+}
+
+%grid-946 {
+	max-width: 946px;
+	padding: 0 2.5%;
+	margin: 0 auto;
+	clear: both;
 }
