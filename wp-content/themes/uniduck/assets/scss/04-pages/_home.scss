@@ -4,7 +4,9 @@ HOME
 
 **********************/
 
-.home.blog {
+.home.blog,
+.archive.tag,
+.search.search-results {
 
 	.search-page {
 		@include search-page;
