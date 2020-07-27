@@ -1,12 +1,29 @@
 <!-- Blog cover START -->
+<?php 
+if (have_posts() ):
+	while ( have_posts() ): the_post();
+?>
 <section class="blog-cover">
 	<div class="container-cover">
-		<div>
-		<h1 class="title-cover">The Legend of the Unicorn - Myths and Legends</h1>
-		<p>Krešo The Duck</p>
-		<a href="#">Back to blog</a>
-		</div>
+		<h1 class="title-cover"><?php the_title();  ?></h1>
+		<p><?php the_author(); ?></p>
+		<a href="<?php echo get_home_url(); ?>">Back to blog</a>
 	</div>
-	<img class="image-cover" src="resources/images/img-unicorn-large.png" srcset="resources/images/img-unicorn-large.png 1x, resources/images/img-unicorn-large@2x.png 2x" alt="Picture of unicorn">
+	<img class="image-cover" >
+	<?php
+
+		$post_id = get_the_ID();
+		$cover_1x_url = get_the_post_thumbnail_url($post_id, 'cover_1x');
+		$cover_2x_url = get_the_post_thumbnail_url($post_id, 'cover_2x');
+
+		echo '<img class="image-cover" src="' . $cover_1x_url . '" srcset="' . $cover_1x_url . ' 1x, ' . $cover_2x_url . ' 2x" title="" alt="">';
+
+	?>
 </section>
+<?php
+endwhile; 
+else: 
+	_e( 'Sorry, no pages matched your criteria.', 'textdomain' ); 
+endif;
+?>
 <!-- Blog cover END -->
