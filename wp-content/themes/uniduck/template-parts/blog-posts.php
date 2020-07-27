@@ -1,231 +1,70 @@
 <!-- Blog Posts START -->
 <section class="blog-posts">
-	<div class="blog-container">
-		<div class="img-container">
-			<img class="image" src="resources/images/img-unicorn2.png" srcset="resources/images/img-unicorn2.png 1x, resources/images/img-unicorn2@2x.png 2x" alt="Picture of unicorn">
-		</div>
 
-		<div class="container-blogs">
-			<p class="blog-date">November 4, 2016</p>
-			<h2 class="blog-post-title">
-				<a href="#">
-					The Unicorn were voted "Consistently Excellent" Pub of the Year
-				</a>
-			</h2>
-			<ul class="blog-tags">
-				<li>
-					<a href="#">Unicorn</a>
-				</li>
-				<li>
-					<a href="#">Pinky</a>
-				</li>
-				<li>
-					<a href="#">Magic</a>
-				</li>
-				<li>
-					<a href="#">Love</a>
-				</li>
-			</ul>
-			<p class="post-text">Once upon a time in a kingdom far-far-away in the lands of the never-ending spring, a king sat in his golden throne and ruled his kingdom in perfect harmony. A person can...<a class="read-more" href="#">Read more</a></p>
-			<ul class="post-info">
-				<li>
-					<a class="icon-favorits" href="#">17 faves</a>
-				</li>
-				<li>
-					<a class="icon-comments" href="#">22 comments</a>
-				</li>
-			</ul>
-		</div>
-	</div>
+	<?php
+	if ( have_posts() ) : 
+	$count = 0;
+    while ( have_posts() ) : the_post();
 
-	<div class="blog-container">
-		<div class="img-container">
-			<img class="image" src="resources/images/img-unicorn3.png" srcset="resources/images/img-unicorn3.png 1x, resources/images/img-unicorn3@2x.png 2x" alt="Picture of unicorn">
-		</div>
+    	if ($count >= 1) {
+    		?>
 
-		<div class="container-blogs">
-			<p class="blog-date">November 4, 2016</p>
-			<h2 class="blog-post-title">
-				<a href="#">
-					The Unicorn Hotel
-				</a>
-			</h2>
-			<ul class="blog-tags">
-				<li>
-					<a href="#">Unicorn</a>
-				</li>
-				<li>
-					<a href="#">Pinky</a>
-				</li>
-				<li>
-					<a href="#">Magic</a>
-				</li>
-				<li>
-					<a href="#">Love</a>
-				</li>
-			</ul>
-			<p class="post-text">Once upon a time in a kingdom far-far-away in the lands of the never-ending spring, a king sat in his golden throne and ruled his kingdom in perfect harmony. A person can...<a class="read-more" href="#">Read more</a></p>
-			<ul class="post-info">
-				<li>
-					<a class="icon-favorits" href="#">17 faves</a>
-				</li>
-				<li>
-					<a class="icon-comments" href="#">22 comments</a>
-				</li>
-			</ul>
-		</div>
-	</div>
+    		<div class="blog-container">
 
-	<div class="blog-container">
-		<div class="img-container">
-			<img class="image" src="resources/images/img-unicorn4.png" srcset="resources/images/img-unicorn4.png 1x, resources/images/img-unicorn4@2x.png 2x" alt="Picture of unicorn tears">
-		</div>
+    			<div class="img-container">
 
-		<div class="container-blogs">
-			<p class="blog-date">November 4, 2016</p>
-			<h2 class="blog-post-title">
-				<a href="#">
-					Unicorn Tears - Gin Liqueur
-				</a>
-			</h2>
-			<ul class="blog-tags">
-				<li>
-					<a href="#">Unicorn</a>
-				</li>
-				<li>
-					<a href="#">Pinky</a>
-				</li>
-				<li>
-					<a href="#">Magic</a>
-				</li>
-				<li>
-					<a href="#">Love</a>
-				</li>
-			</ul>
-			<p class="post-text">Once upon a time in a kingdom far-far-away in the lands of the never-ending spring, a king sat in his golden throne and ruled his kingdom in perfect harmony. A person can...<a class="read-more" href="#">Read more</a></p>
-			<ul class="post-info">
-				<li>
-					<a class="icon-favorits" href="#">17 faves</a>
-				</li>
-				<li>
-					<a class="icon-comments" href="#">22 comments</a>
-				</li>
-			</ul>
-		</div>
-	</div>
+    				<?php
 
-	<div class="blog-container">
-		<div class="img-container">
-			<img class="image" src="resources/images/img-unicorn5.png" srcset="resources/images/img-unicorn5.png 1x, resources/images/img-unicorn5@2x.png 2x" alt="Picture of unicorn">
-		</div>
+    					$post_id = get_the_ID();
+    					$thumbnail_1x_url = get_the_post_thumbnail_url($post_id, 'thumbnail_photo_1x');
+    					$thumbnail_2x_url = get_the_post_thumbnail_url($post_id, 'thumbnail_photo_2x');
 
-		<div class="container-blogs">
-			<p class="blog-date">November 4, 2016</p>
-			<h2 class="blog-post-title">
-				<a href="#">
-					The Legend of the Unicorn - Myths and Legends
-				</a>
-			</h2>
-			<ul class="blog-tags">
-				<li>
-					<a href="#">Unicorn</a>
-				</li>
-				<li>
-					<a href="#">Pinky</a>
-				</li>
-				<li>
-					<a href="#">Magic</a>
-				</li>
-				<li>
-					<a href="#">Love</a>
-				</li>
-			</ul>
-			<p class="post-text">Once upon a time in a kingdom far-far-away in the lands of the never-ending spring, a king sat in his golden throne and ruled his kingdom in perfect harmony. A person can...<a class="read-more" href="#">Read more</a></p>
-			<ul class="post-info">
-				<li>
-					<a class="icon-favorits" href="#">17 faves</a>
-				</li>
-				<li>
-					<a class="icon-comments" href="#">22 comments</a>
-				</li>
-			</ul>
-		</div>
-	</div>
+    					echo '<img class="image" src="' . $thumbnail_1x_url . '" srcset="' . $thumbnail_1x_url . ' 1x, ' . $thumbnail_2x_url . ' 2x" title="" alt="">';
 
-	<div class="blog-container">
-		<div class="img-container">
-			<img class="image" src="resources/images/img-unicorn6.png" srcset="resources/images/img-unicorn6.png 1x, resources/images/img-unicorn6@2x.png 2x" alt="Picture of three unicorn">
-		</div>
+    				?>
 
-		<div class="container-blogs">
-			<p class="blog-date">November 4, 2016</p>
-			<h2 class="blog-post-title">
-				<a href="#">
-					The Unicorn Hotel
-				</a>
-			</h2>
-			<ul class="blog-tags">
-				<li>
-					<a href="#">Unicorn</a>
-				</li>
-				<li>
-					<a href="#">Pinky</a>
-				</li>
-				<li>
-					<a href="#">Magic</a>
-				</li>
-				<li>
-					<a href="#">Love</a>
-				</li>
-			</ul>
-			<p class="post-text">Once upon a time in a kingdom far-far-away in the lands of the never-ending spring, a king sat in his golden throne and ruled his kingdom in perfect harmony. A person can...<a class="read-more" href="#">Read more</a></p>
-			<ul class="post-info">
-				<li>
-					<a class="icon-favorits" href="#">17 faves</a>
-				</li>
-				<li>
-					<a class="icon-comments" href="#">22 comments</a>
-				</li>
-			</ul>
-		</div>
-	</div>
+    			</div>
 
-	<div class="blog-container">
-		<div class="img-container">
-			<img class="image" src="resources/images/img-unicorn7.png" srcset="resources/images/img-unicorn7.png 1x, resources/images/img-unicorn7@2x.png 2x" alt="Picture of unicorn magic">
-		</div>
+    			<div class="container-blogs">
 
-		<div class="container-blogs">
-			<p class="blog-date">November 4, 2016</p>
-			<h2 class="blog-post-title">
-				<a href="#">
-					Unicorn Tears - Gin Liqueur
-				</a>
-			</h2>
-			<ul class="blog-tags">
-				<li>
-					<a href="#">Unicorn</a>
-				</li>
-				<li>
-					<a href="#">Pinky</a>
-				</li>
-				<li>
-					<a href="#">Magic</a>
-				</li>
-				<li>
-					<a href="#">Love</a>
-				</li>
-			</ul>
-			<p class="post-text">Once upon a time in a kingdom far-far-away in the lands of the never-ending spring, a king sat in his golden throne and ruled his kingdom in perfect harmony. A person can...<a class="read-more" href="#">Read more</a></p>
-			<ul class="post-info">
-				<li>
-					<a class="icon-favorits" href="#">17 faves</a>
-				</li>
-				<li>
-					<a class="icon-comments" href="#">22 comments</a>
-				</li>
-			</ul>
-		</div>
-	</div>
+    				<time class="blog-date"><?php the_time('F j, Y'); ?></time>
+
+    				<h2 class="blog-post-title">
+    					<a href="<?php echo post_permalink() ?>">
+    						<?php the_title(); ?>
+    					</a>
+    				</h2>
+
+    				<?php
+    				$tag_list = get_the_tag_list( '<ul class="blog-tags"><li>', '</li><li>', '</li></ul>' );
+
+    				if ( $tag_list && ! is_wp_error( $tag_list ) ) {
+    				    echo $tag_list;
+    				} ?>
+
+    				<p class="post-text"><?php echo get_the_excerpt(); ?><a class="read-more" href="<?php echo post_permalink() ?>">Read more</a></p>
+    				<ul class="post-info">
+    					<li>
+    						<a class="icon-favorits" href="#">17 faves</a>
+    					</li>
+    					<li>
+    						<a class="icon-comments" href="#"><?php echo get_comments_number(); ?> comments</a>
+    					</li>
+    				</ul>
+
+    			</div>
+
+    		</div>
+
+    		<?php
+    	}
+    	$count ++;
+
+	endwhile;
+	else :
+    	_e( 'Sorry, no posts matched your criteria.', 'textdomain' );
+	endif;
+	?>
+
 </section>
-<!-- Blog Posts END -->
+<!-- Blog Posts END
