@@ -127,19 +127,40 @@ BLOG POST ELEMENTS
 	}
 
 	.blog-container {
-		@extend %grid-560;
+		// @extend %grid-560;
+		@extend %grid-946;
 	}
 
-	.media-container {
+	.media-container,
+	.wp-block-image,
+	.wp-block-embed {
 		@extend %grid-946;
 		@include vs-48px(mt);
 
-		.image {
+		img {
 			@include image;
 		}
 	}
 
+	.iframe-container-responsive {
+		position: relative;
+		width: 100%;
+		padding-bottom: 56.25%; 
+		height: 0;
+	}
+	.iframe-container-responsive iframe {
+		position: absolute;
+		top:0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+
 	@include vs-48px(mt);
+
+	p, h1, h2, h3, h4, h5, h6, .blog-tags {
+		@extend %grid-560;
+	}
 
 	p {
 		@extend %paragraph-02;
@@ -150,7 +171,7 @@ BLOG POST ELEMENTS
 		}
 	}
 
-	.caption {
+	figcaption {
 		@include font-family;
 		@include vs-18px(mt);
 
@@ -162,18 +183,10 @@ BLOG POST ELEMENTS
 		max-width: none;
 	}
 
-	h1 {
+	h1, h2 {
 		@extend %title-05;
 		@include vs-30px(mb);
 		@include vs-60px(mt);
-	}
-
-	h2 {
-		@extend %title-05;
-		@include vs-30px(mb);
-		@include vs-30px(mt);
-
-		font-size: 28px;
 	}
 
 	h3 {
