@@ -2,9 +2,11 @@
 <footer class="global-footer">
 	<div class="footer-container">
 		<div class="logo-container">
-			<a class="logo" href="#">
-				<img class="image" src="<?php bloginfo('template_url'); ?>/assets/images/Logo.png" srcset="<?php bloginfo('template_url'); ?>/assets/images/Logo.png 1x, <?php bloginfo('template_url'); ?>/assets/images/Logo@2x.png 2x" alt="Picture of unicorn">
-			</a>
+			<?php
+			if ( function_exists( 'the_custom_logo' ) ) {
+				the_custom_logo();
+			}
+			?>
 			<p class="copy-text">&copy; 2015 Uniduck. All rights reserved.</p>
 		</div>
 
