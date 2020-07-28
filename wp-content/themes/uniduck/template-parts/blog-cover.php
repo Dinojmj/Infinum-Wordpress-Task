@@ -9,12 +9,11 @@ if (have_posts() ):
 		<p><?php the_author(); ?></p>
 		<a href="<?php echo get_home_url(); ?>">Back to blog</a>
 	</div>
-	<img class="image-cover" >
 	<?php
 
 		$post_id = get_the_ID();
-		$cover_1x_url = get_the_post_thumbnail_url($post_id, 'cover_1x');
-		$cover_2x_url = get_the_post_thumbnail_url($post_id, 'cover_2x');
+		$cover_1x_url = get_the_post_thumbnail_url($post_id, 'cover_photo_1x');
+		$cover_2x_url = get_the_post_thumbnail_url($post_id, 'cover_photo_1x');
 
 		echo '<img class="image-cover" src="' . $cover_1x_url . '" srcset="' . $cover_1x_url . ' 1x, ' . $cover_2x_url . ' 2x" title="" alt="">';
 
