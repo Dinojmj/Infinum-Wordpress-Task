@@ -1,15 +1,15 @@
 <?php
 
-//Custom shortcode for qoute left
-function custom_qoute_l($atts, $content = null) {
-    return '<q class="qoute-l">' . $content . '</q>';
+// Custom shortcode for quotes 
+// For quote to be left put [quote side="l"] content [/quote]
+// for quote to be right put [quote side="r"] content [/quote]
+function custom_quote( $atts, $content = null) {
+	
+	$class_arg = shortcode_atts( array(
+		'side' => 'l'
+	), $atts );
+
+	return '<q class="quote-'. $class_arg['side'] .'">' . $content . '</q>';
 }
 
-add_shortcode('qoute-l', 'custom_qoute_l');
-
-//Custom shortcode for qoute right
-function custom_qoute_r($atts, $content = null) {
-    return '<q class="qoute-r">' . $content . '</q>';
-}
-
-add_shortcode('qoute-r', 'custom_qoute_r');
+add_shortcode('quote', 'custom_quote');
