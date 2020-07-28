@@ -7,49 +7,62 @@ BLOG POSTS
 @mixin blog-posts {
 	@extend %grid-1140;
 	@include blog-post-elements;
+	@include vs-30px(mb);
+	
 	overflow: hidden;
 	
 	.blog-container {
-		@extend %grid-33;
-		@include vs-36px(mb);
 
-		padding-bottom: 30px;
-		position: relative;
+		&:first-of-type {
 
-		@include MQ(mobile) {
-			padding-bottom: 48px;
+			@include blog-post-featured();
+
+			padding: 0;
 		}
 
-		@include MQ(tablet) {
-			min-height: 700px;
-		}
+		&:nth-child(n+2) {
 
-		@include MQ(desktop) {
-			min-height: 700px;
-		}
+			@extend %grid-33;
+			@include vs-36px(mb);
 
-		.img-container {
-			@include vs-12px(mb);
-		}
+			padding-bottom: 30px;
+			position: relative;
 
-		.container-blogs {
-			padding: 0 1.5%;
-
-			.blog-date {
-				@include vs-6px(mb);
+			@include MQ(mobile) {
+				padding-bottom: 48px;
 			}
 
-			.blog-post-title {
+			@include MQ(tablet) {
+				min-height: 700px;
+			}
+
+			@include MQ(desktop) {
+				min-height: 700px;
+			}
+
+			.img-container {
 				@include vs-12px(mb);
 			}
 
-			.blog-tags {
-				//...
-			}
+			.container-blogs {
+				padding: 0 1.5%;
 
-			.post-info {
-				position: absolute;
-				bottom: 0;
+				.blog-date {
+					@include vs-6px(mb);
+				}
+
+				.blog-post-title {
+					@include vs-12px(mb);
+				}
+
+				.blog-tags {
+					//...
+				}
+
+				.post-info {
+					position: absolute;
+					bottom: 0;
+				}
 			}
 		}
 	}
