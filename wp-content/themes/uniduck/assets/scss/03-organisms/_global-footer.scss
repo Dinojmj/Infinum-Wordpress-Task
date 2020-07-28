@@ -7,6 +7,7 @@ GLOBAL FOOTER
 .global-footer {
 	@include vs-60px(pt);
 	@include vs-60px(pb);
+	@include vs-120px(mt);
 
 	overflow: hidden;
 	background-color: $grey-06;
