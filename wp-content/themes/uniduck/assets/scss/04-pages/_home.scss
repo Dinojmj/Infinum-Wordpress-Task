@@ -6,7 +6,8 @@ HOME
 
 .home.blog,
 .archive.tag,
-.search.search-results {
+.search.search-results,
+.search.search-no-results {
 
 	.search-page {
 		@include search-page;
@@ -29,7 +30,7 @@ HOME
 		overflow: hidden;
 		text-align: center;
 
-		.more-button {
+		a {
 			@include button-load-more;
 		}
 	}
