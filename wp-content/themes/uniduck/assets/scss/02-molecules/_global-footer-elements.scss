@@ -11,12 +11,12 @@ GLOBAL FOOTER ELEMENTS
 		display: inline-block;
 		float: left;
 	
-		.logo {
+		.custom-logo-link {
 			@include logo;
 
 			float: left;
 
-			.image {
+			img {
 				@include image;
 			}
 		}
