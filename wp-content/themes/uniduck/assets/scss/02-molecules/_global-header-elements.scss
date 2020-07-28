@@ -7,12 +7,12 @@ GLOBAL HEADER ELEMENTS
 @mixin global-header-elements {
 	overflow: hidden;
 
-	.logo {
+	.custom-logo-link {
 		@include logo;
 
 		float: left;
 
-		.image {
+		img {
 			@include image;
 		}
 	}
@@ -24,7 +24,14 @@ GLOBAL HEADER ELEMENTS
 			float: left;
 			display: inline-block;
 
-			.home {
+			&:last-of-type {
+				margin-right: 0;
+			}
+		}
+
+		.home {
+
+			a {
 				@include font-family;
 				@include transition-effect(color $transition-duration $transition-effect);
 
@@ -41,22 +48,27 @@ GLOBAL HEADER ELEMENTS
 					}
 				}
 			}
+		}
 
-			.button-pink {
+		.button-pink {
+
+			a {
 				@extend %button-pink; 
-
-				margin-right: 25px;
 			}
+		}
 
-			.button-grey {
+		.button-grey {
+
+			a {
 				@extend %button-grey; 
 			}
 		}
+			
 	}
 
 	@include MQ(mobile) {
 		
-		.logo {
+		.custom-logo-link {
 			float: none;
 			display: block;
 			margin: 0 auto;
@@ -64,6 +76,7 @@ GLOBAL HEADER ELEMENTS
 
 		nav {
 			@include vs-18px(mt);
+
 			clear: both;
 			float: none;
 
@@ -76,20 +89,29 @@ GLOBAL HEADER ELEMENTS
 				&:last-of-type {
 					margin-bottom: 0;
 				}
+			}
 
-				.home {
+			.home {
+
+				a {
 					display: block;
 					margin-right: 0;
 					padding: 16px 29px;
 					line-height: 1.2em;
 				}
+			}
 
-				.button-pink {
+			.button-pink {
+
+				a {
 					display: block;
 					margin-right: 0;
 				}
+			}
 
-				.button-grey {
+			.button-grey {
+
+				a {
 					display: block;
 				}
 			}
@@ -98,7 +120,7 @@ GLOBAL HEADER ELEMENTS
 
 	@include MQ(tablet) {
 		
-		.logo {
+		.custom-logo-link {
 			float: none;
 			display: block;
 			margin: 0 auto;
@@ -108,6 +130,10 @@ GLOBAL HEADER ELEMENTS
 			@include vs-24px(mt);
 			clear: both;
 			float: none;
+
+			li {
+				margin-right: 25px;
+			}
 
 			ul {
 				overflow: hidden;
@@ -120,7 +146,11 @@ GLOBAL HEADER ELEMENTS
 	@include MQ(desktop) {
 		position: relative;
 
-		.logo {
+		li {
+			margin-right: 25px;
+		}
+
+		.custom-logo-link {
 			position: absolute;
 	  		top: 50%;
 			transform: translate(0, -50%);
