@@ -68,7 +68,7 @@ BLOG POST ELEMENTS
 				margin-right: 0;
 			}
 
-			a {
+			span {
 				@extend %paragraph-blog-info;
 
 				font-size: 16px;
@@ -94,8 +94,8 @@ BLOG POST ELEMENTS
 	}
 }
 
-//Mixin for qoute
-@mixin qoute {
+//Mixin for quote
+@mixin quote {
 	@include font-family;
 	@include vs-60px(pt);
 	@include vs-48px(pb);
@@ -166,7 +166,7 @@ BLOG POST ELEMENTS
 		@extend %paragraph-02;
 		@include vs-18px(mb);
 
-		span {
+		span, strong {
 			color: $highlight-01;
 		}
 	}
@@ -221,9 +221,9 @@ BLOG POST ELEMENTS
 		font-size: 20px;
 	}
 
-	.qoute-r {
+	.quote-r {
 
-		@include qoute;
+		@include quote;
 
 		@include MQ(desktop) {
 			margin-right: -280px;
@@ -232,9 +232,9 @@ BLOG POST ELEMENTS
 		}
 	}
 
-	.qoute-l {
+	.quote-l {
 
-		@include qoute;
+		@include quote;
 
 		@include MQ(desktop) {
 			margin-left: -280px;
