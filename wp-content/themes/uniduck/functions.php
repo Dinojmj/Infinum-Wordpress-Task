@@ -44,3 +44,13 @@ function wpdocs_excerpt_more( $more ) {
     return '...';
 }
 add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
+
+// Recommended image logo size
+function themename_custom_logo_setup() {
+	$defaults = array(
+	'height'      => 44,
+	'width'       => 344
+	);
+	add_theme_support( 'custom-logo', $defaults );
+}
+add_action( 'after_setup_theme', 'themename_custom_logo_setup' );
