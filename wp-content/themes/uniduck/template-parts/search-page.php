@@ -1,6 +1,6 @@
 <!-- Search page START -->
 <section class="search-page">
-	<h1 class="main-title">The Unicorn & a Duck</h1>
+	<h1 class="main-title"><?php echo get_bloginfo('description'); ?></h1>
 
 	<form class="search-blog-form" role="search" method="get" action="/" id="search-blog">
 		<input class="search-icon" type="submit" value="" id="search-icon">
