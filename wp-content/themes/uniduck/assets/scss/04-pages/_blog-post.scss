@@ -12,6 +12,7 @@ BLOG POST
 
 	.blog-single {
 		@include blog-post-single;
+		@include vs-48px(mb);
 	}
 
 	.related-post {
