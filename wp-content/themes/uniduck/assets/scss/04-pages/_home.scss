@@ -7,7 +7,8 @@ HOME
 .home.blog,
 .archive.tag,
 .search.search-results,
-.search.search-no-results {
+.search.search-no-results,
+.error404 {
 
 	.search-page {
 		@include search-page;
