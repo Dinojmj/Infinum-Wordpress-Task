@@ -12,15 +12,8 @@
 		</div>
 
 		<ul class="social-media-footer">
-			<li>
-				Like <a href="#" target="_blank">Uniduck</a> on <a class="facebook" href="#" target="_blank"></a>
-			</li>
-			<li>
-				Follow <a href="#" target="_blank">@uniduck</a> on <a class="twitter" href="#" target="_blank"></a>
-			</li>
-			<li>
-				Follow <a href="#" target="_blank">@uniduck</a> on <a class="instagram" href="#" target="_blank"></a>
-			</li>
+			<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Widget Area Footer Social") ) : ?>
+			<?php endif;?>
 		</ul>
 	</div>
 </footer>

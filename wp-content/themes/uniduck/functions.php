@@ -80,3 +80,12 @@ if ( function_exists('register_sidebar') )
     'after_widget' => '</div>',
   )
 );
+
+// Widget for social media footers
+if ( function_exists('register_sidebar') )
+  register_sidebar(array(
+    'name' => 'Widget Area Footer Social',
+    'before_widget' => '<div class = "widget-area-social">',
+    'after_widget' => '</div>',
+  )
+);

@@ -36,6 +36,10 @@ GLOBAL FOOTER ELEMENTS
 		color: $grey-07;
 	}
 
+	.textwidget.custom-html-widget {
+		margin-top: 0;
+	}
+
 	.social-media-footer {
 		@extend %paragraph-01;
 
