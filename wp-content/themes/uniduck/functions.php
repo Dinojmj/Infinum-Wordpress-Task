@@ -54,3 +54,29 @@ function themename_custom_logo_setup() {
 	add_theme_support( 'custom-logo', $defaults );
 }
 add_action( 'after_setup_theme', 'themename_custom_logo_setup' );
+
+// Function for responsive youtube videos
+add_filter('the_content', function($content) {
+	return str_replace(array("<iframe", "</iframe>"), array('<div class="iframe-container"><iframe', "</iframe></div>"), $content);
+});
+
+add_filter('embed_oembed_html', function ($html, $url, $attr, $post_id) {
+	if(strpos($html, 'youtube.com') !== false || strpos($html, 'youtu.be') !== false){
+  		return '<div class="iframe-container-responsive iframe-container-responsive">' . $html . '</div>';
+	} else {
+	 return $html;
+	}
+}, 10, 4);
+
+add_filter('embed_oembed_html', function($code) {
+  return str_replace('<iframe', '<iframe class="iframe-container-responsive iframe" ', $code);
+});
+
+// Widget for footer text
+if ( function_exists('register_sidebar') )
+  register_sidebar(array(
+    'name' => 'Widget Area Footer',
+    'before_widget' => '<div class = "widget-area">',
+    'after_widget' => '</div>',
+  )
+);
