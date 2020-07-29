@@ -10,7 +10,7 @@ GLOBAL FOOTER ELEMENTS
 		overflow: hidden;
 		display: inline-block;
 		float: left;
-	
+
 		.custom-logo-link {
 			@include logo;
 
@@ -26,7 +26,8 @@ GLOBAL FOOTER ELEMENTS
 		}
 	}
 
-	.copy-text {
+	.copy-text,
+	.textwidget {
 		@extend %paragraph-01;
 		@include vs-18px(mt);
 
@@ -61,7 +62,7 @@ GLOBAL FOOTER ELEMENTS
 				height: 20px;
 				margin-top: 4px;
 				background-image: url('../icons/ic-facebook.svg');
-				
+
 			}
 
 			.twitter {

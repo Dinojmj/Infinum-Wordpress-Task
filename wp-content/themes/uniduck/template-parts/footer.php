@@ -7,7 +7,8 @@
 				the_custom_logo();
 			}
 			?>
-			<p class="copy-text">&copy; 2015 Uniduck. All rights reserved.</p>
+			<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Widget Area Footer") ) : ?>
+			<?php endif;?>
 		</div>
 
 		<ul class="social-media-footer">
