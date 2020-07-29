@@ -19,7 +19,7 @@ SEARCH PAGE
 	.search-blog-form {
 		margin: 0 auto;
 		display: block;
-		max-width: 210px; 
+		text-align: center;
 
 		.search-icon {
 			@include vs-6px(mt);
@@ -31,13 +31,14 @@ SEARCH PAGE
 			background-repeat: no-repeat;
 			background-color: $white;
 			margin-right: 8px;
-			float: left;
+			vertical-align: sub;
 		}
 
 		.input-field {
 			@extend %paragraph-01;
 
 			border: none;
+			display: inline-block;
 		}
 	}
 }
