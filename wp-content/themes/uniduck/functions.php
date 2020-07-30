@@ -75,15 +75,6 @@ if (function_exists('register_sidebar'))
     )
 );
 
-// Widget for social media footers
-if (function_exists('register_sidebar'))
-    register_sidebar(array(
-        'name' => 'Widget Area Footer Social',
-        'before_widget' => '<div class = "widget-area-social">',
-        'after_widget' => '</div>',
-    )
-);
-
 // Social media customizer footer
 add_action('customize_register', 'custom_social_media_options');
 
