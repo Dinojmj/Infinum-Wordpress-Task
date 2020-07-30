@@ -60,6 +60,13 @@ GLOBAL FOOTER ELEMENTS
 				color: $highlight-01;
 			}
 
+			.facebook,
+			.twitter,
+			.instagram {
+				overflow: hidden;
+				line-height: 150px;
+			}
+
 			.facebook {
 				@extend %icon-foundation;
 
