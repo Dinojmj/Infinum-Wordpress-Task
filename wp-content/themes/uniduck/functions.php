@@ -40,14 +40,14 @@ function wpdocs_excerpt_more( $more ) {
 add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
 
 // Recommended image logo size
-function themename_custom_logo_setup() {
+function uniduck_custom_logo_setup() {
 	$defaults = array(
 	'height'      => 44,
 	'width'       => 344
 	);
 	add_theme_support( 'custom-logo', $defaults );
 }
-add_action( 'after_setup_theme', 'themename_custom_logo_setup' );
+add_action( 'after_setup_theme', 'uniduck_custom_logo_setup' );
 
 // Function for responsive youtube videos
 add_filter('the_content', function($content) {
@@ -67,19 +67,109 @@ add_filter('embed_oembed_html', function($code) {
 });
 
 // Widget for footer text
-if ( function_exists('register_sidebar') )
-  register_sidebar(array(
-    'name' => 'Widget Area Footer',
-    'before_widget' => '<div class = "widget-area">',
-    'after_widget' => '</div>',
-  )
+if (function_exists('register_sidebar'))
+    register_sidebar(array(
+        'name' => 'Widget Area Footer',
+        'before_widget' => '<div class = "widget-area">',
+        'after_widget' => '</div>',
+    )
 );
 
 // Widget for social media footers
-if ( function_exists('register_sidebar') )
-  register_sidebar(array(
-    'name' => 'Widget Area Footer Social',
-    'before_widget' => '<div class = "widget-area-social">',
-    'after_widget' => '</div>',
-  )
+if (function_exists('register_sidebar'))
+    register_sidebar(array(
+        'name' => 'Widget Area Footer Social',
+        'before_widget' => '<div class = "widget-area-social">',
+        'after_widget' => '</div>',
+    )
 );
+
+// Social media customizer footer
+add_action('customize_register', 'custom_social_media_options');
+
+function custom_social_media_options($wp_customize) {
+
+    $wp_customize->add_section('uniduck_social_media', array(
+        'title'    => 'Social media (footer)',
+        'description' => '',
+        'priority' => 120,
+    ));
+
+    // Facebook options start
+    $wp_customize->add_setting('uniduck_theme_options[fb_username]', array(
+        'default'        => '',
+        'capability'     => 'edit_theme_options',
+        'type'           => 'option',
+    ));
+
+    $wp_customize->add_control('uniduck_fb_username', array(
+        'label'      => 'Facebook username',
+        'section'    => 'uniduck_social_media',
+        'settings'   => 'uniduck_theme_options[fb_username]',
+    ));
+
+    $wp_customize->add_setting('uniduck_theme_options[fb_link]', array(
+        'default'        => '',
+        'capability'     => 'edit_theme_options',
+        'type'           => 'option',
+    ));
+
+    $wp_customize->add_control('uniduck_fb_link', array(
+        'label'      => 'Facebook link',
+        'section'    => 'uniduck_social_media',
+        'settings'   => 'uniduck_theme_options[fb_link]',
+    ));
+    // Facebook options end
+
+    // Twitter options start
+    $wp_customize->add_setting('uniduck_theme_options[tw_username]', array(
+        'default'        => '',
+        'capability'     => 'edit_theme_options',
+        'type'           => 'option',
+    ));
+
+    $wp_customize->add_control('uniduck_tw_username', array(
+        'label'      => 'Twitter username',
+        'section'    => 'uniduck_social_media',
+        'settings'   => 'uniduck_theme_options[tw_username]',
+    ));
+
+    $wp_customize->add_setting('uniduck_theme_options[tw_link]', array(
+        'default'        => '',
+        'capability'     => 'edit_theme_options',
+        'type'           => 'option',
+    ));
+
+    $wp_customize->add_control('uniduck_tw_link', array(
+        'label'      => 'Twitter link',
+        'section'    => 'uniduck_social_media',
+        'settings'   => 'uniduck_theme_options[tw_link]',
+    ));
+    // Twitter options end
+
+    // Instagram options start
+    $wp_customize->add_setting('uniduck_theme_options[ig_username]', array(
+        'default'        => '',
+        'capability'     => 'edit_theme_options',
+        'type'           => 'option',
+    ));
+
+    $wp_customize->add_control('uniduck_ig_username', array(
+        'label'      => 'Instagram username',
+        'section'    => 'uniduck_social_media',
+        'settings'   => 'uniduck_theme_options[ig_username]',
+    ));
+
+    $wp_customize->add_setting('uniduck_theme_options[ig_link]', array(
+        'default'        => '',
+        'capability'     => 'edit_theme_options',
+        'type'           => 'option',
+    ));
+
+    $wp_customize->add_control('uniduck_ig_link', array(
+        'label'      => 'Instagram link',
+        'section'    => 'uniduck_social_media',
+        'settings'   => 'uniduck_theme_options[ig_link]',
+    ));
+    // Instagram options end
+}
