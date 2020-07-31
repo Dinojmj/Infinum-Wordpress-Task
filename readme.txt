@@ -10,8 +10,11 @@ The WordPress database prefix is
 iwpt_ 
 
 
-WordPress login confidential
+WordPress login information:
 
 Username:	Dino
 
 Password:	VSW2g8PFGC)r9R2zWJ
+
+
+Before deploying search engine visibility in WordPress settings reading should be turned off.
